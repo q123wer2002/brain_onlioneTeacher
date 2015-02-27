@@ -1,0 +1,119 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width="100%" cellspacing="1" cellpadding="3"  class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=set">
+    <tr  class="head"> 
+      <td colspan="2"> 
+        <div align="center"><font color="#FFFFFF">普通会员组升级方案设置</font></div>
+      </td>
+    </tr>
+    <tr bgcolor='#FFFFFF'> 
+      <td width='30%' align="left">普通会员默认升级方式:</td>
+      <td width='70%' align="left"> 
+        <input type="radio" name="webdbs[groupUpType]" value="0" $groupUpType[0]>
+        按积分多少自动升级 
+        <input type="radio" name="webdbs[groupUpType]" value="1" $groupUpType[1]>
+        通过积分購買才能升级 </td>
+    </tr>
+    <tr bgcolor='#FFFFFF'> 
+      <td width='30%' align="left">如果個别会员自愿通过积分購買升级:</td>
+      <td width='70%' align="left"> 有效期为
+<input type="text" name="webdbs[groupTime]" size="5" value="$webdb[groupTime]">
+        天</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="2"> 
+        <input type="hidden" name="step" value="1">
+        <input type="hidden" name="action" value="list">
+        <input type="submit" name="Submit" value="修改以上设置">
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF" align="left"> 
+      <td colspan="2">注意:<br>
+        1. 按积分多少自动升级的话,當积分低于指定积分的话.将自动降级.<br>
+        2. 通过积分購買才能升级的话,當超过有效期時,自动降级.<br>
+        3. 普通会员组升级方式设置更改後.用户下次登錄才会生效.<br>
+        4. 注意:如果妳轻易的更换有效日期,原有購買用户不受影响,新購買級別的用户才受影响.</td>
+    </tr>
+  </form>
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=add">
+  </form>
+</table> 
+
+<table width="100%" cellspacing="1" cellpadding="3"  class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=$job">
+    <tr  class="head"> 
+      <td colspan="6"> 
+        <div align="center"><font color="#FFFFFF">用户组前台权限琯理</font></div>
+      </td>
+    </tr>
+    <tr bgcolor=#EEEEEE align="center"> 
+      <td width="6%"> 
+        <div align=center><b><font color="#990033">ID代號</font></b></div>
+      </td>
+      <td width="14%"><b><font color="#990033">用户组名称</font></b></td>
+      <td width="17%"><b><font color="#990033">用户组性质</font></b></td>
+      <td width="19%"><b><font color="#990033">用户组成员</font></b></td>
+      <td width="20%"><b><font color="#990033">升级积分</font></b></td>
+      <td width="24%"><b><font color="#990033">修改权限</font></b></td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+    <tr bgcolor='#FFFFFF'> 
+      <td width='6%' align="center"> $rs[gid] </td>
+      <td width='14%'> 
+        <input type='text' name='postdb[{$rs[gid]}][grouptitle]' value='$rs[grouptitle]'>
+      </td>
+      <td width='17%' align="center">$rs[ifSystem]</td>
+      <td width='19%' align="center">
+        <!--
+EOT;
+if($rs[gid]!=2){
+print <<<EOT
+-->
+	  <a href="index.php?lfj=member&job=list&T=&groupid=$rs[gid]" title="點擊查看此用户组下的所有会员名單"><img src="../member/images/icon_user.gif" border="0"></a>
+        <!--
+EOT;
+}
+print <<<EOT
+-->
+	  </td>
+      <td width='20%' align="center"> 
+        <!--
+EOT;
+if(!$rs[gptype]){
+print <<<EOT
+-->
+        <input type='text' name='postdb[{$rs[gid]}][levelnum]' value='$rs[levelnum]' size="8">
+        <!--
+EOT;
+}
+print <<<EOT
+-->
+      </td>
+      <td align="center" width="24%"><a href="index.php?lfj=$lfj&job=edit&gid=$rs[gid]" title="點擊修改权限"><img src="../member/images/button_properties.png" border="0"></a></td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="6"> 
+        <input type="hidden" name="step" value="1">
+        <input type="hidden" name="action" value="list">
+        <input type="submit" name="Submit" value="修改以上设置">
+      </td>
+    </tr>
+  </form>
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=add">
+  </form>
+</table> 
+<!--
+EOT;
+?>
+-->

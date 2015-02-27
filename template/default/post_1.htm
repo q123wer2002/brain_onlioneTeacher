@@ -1,0 +1,186 @@
+<!--
+<?php
+$detail=explode(",",$webdb[Post_group_UpPhoto].',3,4');
+if($webdb[Post_group_UpPhoto]&&!in_array($groupdb['gid'],$detail))$none='none;';
+print <<<EOT
+--> 
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+<!--
+EOT;
+//if(!$_fromurl&&!$step){
+$_fromurl=urlencode($_fromurl);
+{
+print <<<EOT
+-->
+
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">講師資料</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>講師資料</li>
+  </ul>
+
+ 
+  <p class="clear"><font color="red">※講師資料十分重要，請認真填寫。</font></p>
+
+	<form name="FORM" id="FORM" method="post" action="?action=$atc"  enctype="multipart/form-data" onsubmit="return post();">
+            <script>
+function upfile(url,name,size,ty){
+	document.getElementById(ty).value=url;
+}
+</script>
+      <table id ="div_store_left" class="reg_table" width="100%" border="0" cellpadding="0" cellspacing="1">
+          <tr><th>講師姓名:</th><td><input class="text" maxlength="255" name="postdb[title]" id="atc_title" value="$rsdb[title]" /> <br /></td></tr>
+<!--
+EOT;
+if($job!="edit"&&$webdb[Info_GroupPostYzImg]&&!$web_admin&&in_array($groupdb['gid'],explode(",",$webdb[Info_GroupPostYzImg]))){
+print <<<EOT
+-->
+          <tr><th>验证碼:</th><td><input class="text" maxlength="255"  /><input id="yzImgNum" type="text" name="yzimg" class="text" maxlength="255">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<img border="0" name="imageField" onclick="this.src=this.src+Math.random();" src="$webdb[www_url]/do/yzimg.php?'+Math.random()+'">');
+//-->
+</SCRIPT></td></tr>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+          <tr><th>講師相片:<a href="#" title="点击增加1项" onClick="showinput()"><img border='0' src='$webdb[www_url]/images/default/menu_add.gif'></a></th><td><SCRIPT LANGUAGE="JavaScript">
+<!--
+function choosef(i,t){
+	if(t=='out'){
+		document.getElementById("out_url"+i).style.display='';
+		document.getElementById("in_url"+i).style.display='none';
+	}else{
+		document.getElementById("out_url"+i).style.display='none';
+		document.getElementById("in_url"+i).style.display='';
+	}
+}
+//-->
+</SCRIPT>
+                    <!--
+EOT;
+if($groupdb['gid']==2){
+	$picnum=$webdb[Info_GuestPostPicNum]!=''?intval($webdb[Info_GuestPostPicNum]):3;
+}elseif($groupdb['gid']==8){
+	$picnum=$webdb[Info_MemberPostPicNum]!=''?intval($webdb[Info_MemberPostPicNum]):10;
+}else{
+	$picnum=80;
+}
+if($picnum<1)unset($listdb);
+$detail=explode(",",$webdb[group_UpPhoto].',3,4');
+$i=0;
+foreach($listdb AS $key=>$rs){
+$i++;
+print <<<EOT
+-->
+
+                    <input type="text" name="photodb[$i]" id="out_url$i" value="$rs[imgurl]" class="text">
+                    <input type="file" name="local_file$i" id="in_url$i" style="display:none;">
+                    <input type="radio" name="ftype[$i]" value="out" checked onclick="choosef($i,'out')">
+                    网络文件 
+                    <input type="radio" name="ftype[$i]" value="in" onclick="choosef($i,'in')">
+                    本地文件 
+                    <input type="hidden" name="piddb[$i]" value="$key">
+                    <br>
+                    <!--
+EOT;
+}print <<<EOT
+-->
+                    <div id='input$i'></div>
+                    <script>
+totalnum=$i;
+limitnum=$picnum;
+function showinput(){
+	if(totalnum>(limitnum-1)){
+		alert("你最多只能上"+limitnum+"传张图片!");
+		return ;
+	}
+	var str='';
+	var divid='input'+totalnum;
+	var num=2;
+	num=document.FORM.nums.value;
+	for(var i=1;i<=num;i++){
+		totalnum=totalnum+i;
+		str+='<input type="text" name=photodb['+totalnum+'] class="text" id="out_url'+totalnum+'"> <input type="file" name="local_file'+totalnum+'" id="in_url'+totalnum+'" style="display:none;"> <input type="radio" name="ftype['+totalnum+']" value="out" checked onclick="choosef('+totalnum+',\'out\')">网络文件 <input type="radio" name="ftype['+totalnum+']" value="in" onclick="choosef('+totalnum+',\'in\')">本地文件<br>';
+	}
+	document.getElementById(divid).innerHTML=str+"<div id='input"+totalnum+"'></div>";
+} 
+</script><input type="hidden" size="3" name="nums" value="1">
+          </td></tr>
+          <tr><th>講師簡介:</th><td><textarea  name='postdb[content]' id='atc_content' style='width:500px;height:100px;'>$rsdb[content]</textarea><br></td></tr><tr><th>講師年齡:<font color=red>*</font></th><td> <input type='radio' name='postdb[age]' value='10代' {$rsdb[age]['10代']}>10代  <input type='radio' name='postdb[age]' value='20代' {$rsdb[age]['20代']}>20代  <input type='radio' name='postdb[age]' value='30代' {$rsdb[age]['30代']}>30代  <input type='radio' name='postdb[age]' value='40代' {$rsdb[age]['40代']}>40代  <input type='radio' name='postdb[age]' value='50代' {$rsdb[age]['50代']}>50代  <br></td></tr><tr><th>講師性別:<font color=red>*</font></th><td> <input type='radio' name='postdb[sex]' value='男' {$rsdb[sex]['男']}>男  <input type='radio' name='postdb[sex]' value='女' {$rsdb[sex]['女']}>女  <br></td></tr><tr><th>講師特點:<font color=red>*</font></th><td> <input type='checkbox' name='postdb[feature][]' value='講師經歷3年以上' {$rsdb[feature]['講師經歷3年以上']}>講師經歷3年以上  <input type='checkbox' name='postdb[feature][]' value='TOEIC對策' {$rsdb[feature]['TOEIC對策']}>TOEIC對策  <input type='checkbox' name='postdb[feature][]' value='英文特長' {$rsdb[feature]['英文特長']}>英文特長  <br></td></tr><tr><th>語言水平:<font color=red>*</font></th><td> <input type='radio' name='postdb[language]' value='一級' {$rsdb[language]['一級']}>一級  <input type='radio' name='postdb[language]' value='二級' {$rsdb[language]['二級']}>二級  <br></td></tr><tr><th>生日:</th><td> <input   type='text' name='postdb[birthday]' id='atc_birthday' class='text' value='$rsdb[birthday]'> <br>例：1989-02-03</td></tr><tr><th>經歷:</th><td><textarea  name='postdb[experience]' id='atc_experience' style='width:400px;height:100px;'>$rsdb[experience]</textarea><br></td></tr><tr><th>喜歡場所:</th><td> <input   type='text' name='postdb[place]' id='atc_place' class='text' value='$rsdb[place]'> <br></td></tr><tr><th>興趣:</th><td> <input   type='text' name='postdb[savor]' id='atc_savor' class='text' value='$rsdb[savor]'> <br></td></tr><tr><th>專長:</th><td> <input   type='text' name='postdb[specialty]' id='atc_specialty' class='text' value='$rsdb[specialty]'> <br></td></tr><!----> 
+      </table>
+            <p class="btnarea algnC"><input type="submit" name="Submit" value=" 提 交 " class="button"></p>
+                    
+                    <input type="hidden" name="postdb[city_id]" value="1">
+					<input type="hidden" name="fid" value="$fid">
+                    <input type="hidden" name="id" value="$id">
+                    <input type="hidden" name="fid_bak1" value="$rsdb[fid_bak1]">
+                    <input type="hidden" name="fid_bak2" value="$rsdb[fid_bak2]">
+                    <input type="hidden" name="fid_bak3" value="$rsdb[fid_bak3]">
+                    <input type="hidden" name="$webdb[rand_num_inputname]" value="$webdb[rand_num]">
+
+   </form>
+
+
+  
+</div>
+
+      
+    </div>
+
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function post(){
+	t="$webdb[Force_Choose_City]";
+	obj_city=document.getElementById("{$_pre}city");
+	if(t=='1'&&obj_city!=null){
+		city_value=obj_city.options[obj_city.selectedIndex].value;
+		if(obj_city.options.length>1&&city_value==''){
+			alert("你必须要选择一个城市");
+			obj_city.focus();
+			return false;
+		}
+	}
+	obj_city=document.getElementById("{$_pre}zone");
+	if(t=='1'&&obj_city!=null){
+		city_value=obj_city.options[obj_city.selectedIndex].value;
+		if(obj_city.options.length>1&&city_value==''){
+			alert("你必须要选择一个辖区");
+			obj_city.focus();
+			return false;
+		}
+	}
+	obj_city=document.getElementById("{$_pre}street");
+	if(t=='1'&&obj_city!=null){
+		city_value=obj_city.options[obj_city.selectedIndex].value;
+		if(obj_city.options.length>1&&city_value==''){
+			alert("你必须要选择一个地段");
+			obj_city.focus();
+			return false;
+		}
+	}
+	document.getElementById("FORM").submit();
+}
+
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

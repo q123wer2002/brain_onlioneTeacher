@@ -1,0 +1,319 @@
+<!--
+<?php
+include(dirname(__FILE__)."/map.php");
+$onlineip = ipfrom($onlineip);
+print <<<EOT
+-->
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">會員中心</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>會員中心</li>
+  </ul>
+<div style="float:right; width:710px">
+<p>檢查，變更，申請的計劃是在這裡！</p>
+<div style="float:left; width:350px">
+<div style="height:30px; line-height:30px; background:#FDB901; padding-left:15px; font-weight:bold; color:#FFFFFF">即將開始的課程</div>
+<div style="background:url($webdb[www_url]/member/images/default/c.jpg) no-repeat 0px 10px; width:350px; height:130px; float:left">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course_u WHERE u_id='$lfjuid' and ktime>'$timestamp' ORDER BY ktime ASC LIMIT 1");
+while($rss = $db->fetch_array($query)){
+$rss[ktime]=$rss[ktime]-$timestamp;
+print <<<EOT
+-->
+<span id="endtime" style="font-size:18px; color:#FF0000; font-weight:bold;padding-left:110px; height:130px; line-height:130px; display:block">$rss[ktime]</span>
+<script type="text/javascript">
+var CID = "endtime";
+if(window.CID != null)
+{
+var iTime = document.getElementById(CID).innerText;
+var Account;
+RemainTime();
+}
+function RemainTime()
+{
+var iDay,iHour,iMinute,iSecond;
+var sDay="",sHour="",sMinute="",sSecond="",sTime="";
+if (iTime >= 0)
+{
+iDay = parseInt(iTime/24/3600);
+if (iDay > 0)
+{
+sDay = iDay + "天";
+}
+iHour = parseInt((iTime/3600)%24);
+if (iHour > 0){
+sHour = iHour + "小時";
+}
+iMinute = parseInt((iTime/60)%60);
+if (iMinute > 0){
+sMinute = iMinute + "分鍾";
+}
+iSecond = parseInt(iTime%60);
+if (iSecond >= 0){
+sSecond = iSecond + "秒";
+}
+if ((sDay=="")&&(sHour=="")){
+sTime="" + sMinute+sSecond + "";
+}
+else
+{
+sTime=sDay+sHour+sMinute+sSecond;
+}
+if(iTime==0){
+clearTimeout(Account);
+sTime="課程时间到了！";
+}
+else
+{
+Account = setTimeout("RemainTime()",1000);
+}
+iTime=iTime-1;
+}
+else
+{
+sTime="課程结束！";
+}
+document.getElementById(CID).innerHTML = sTime;
+}
+</script>
+
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+<!--
+EOT;
+$query = $db->query("SELECT COUNT(*) AS Num from js_course_u WHERE u_id='$lfjuid' and ktime>'$timestamp'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[Num]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/list.php?fid=1" target="_parent" style="font-size:14px; font-weight:bold; color:#FF9804; padding-left:140px; height:130px; line-height:130px; display:block">您最近沒有預約安排！</a>
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</div>
+
+<table width="350" style="border:#FF9900 1px solid">
+	<tr>
+		<td width="250" style="background:#FAECB5; border:#FF9900 1px solid"><center>時間</center></td>
+		<td width="100" style="background:#FAECB5; border:#FF9900 1px solid"><center>講師</center></td>
+		<td width="50" style="background:#FAECB5; border:#FF9900 1px solid"><center>取消</center></td>
+	</tr>
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course_u WHERE u_id='$lfjuid' and ktime>'$timestamp' ORDER BY ktime ASC");
+while($rss = $db->fetch_array($query)){
+$rss[ktime] = date("Y年m月d日 H:i",$rss[ktime]);
+print <<<EOT
+-->
+	<tr>
+		<td style="border:#FF9900 1px solid"><center>$rss[ktime]</center></td>
+		<td style="border:#FF9900 1px solid"><center><a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[t_id]" target="_blank">$rss[t_name]</a></center></td>
+		<td style="border:#FF9900 1px solid"><center><a href="$webdb[www_url]/f/post.php?action=dels&fid=1&id=$rss[id]" onclick="{if(confirm('確認要取消 $rss[ktime] 與講師 $rss[t_name] 的預約嗎？')){return true;}return false;}"><img src="$webdb[www_url]/images/btn_close_gray_s.png" /></a></center></td>
+	</tr>
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+</table>
+
+※妳可以在開課前的30分鍾取消已經預約的課程。
+
+
+</div>
+<script type="text/javascript">
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+<div style="float:right; width:350px">
+<div style="height:30px; line-height:30px; background:#89C637; padding-left:15px; font-weight:bold; color:#FFFFFF">已經結束的課程</div>
+<div style="height:10px"></div>
+<div style="width:350px; float:right; line-height:20px">
+		<div style="width:196px; background:#F8F8F8; border:#C9C9C9 1px solid; border-right:none; float:left; line-height:36px">
+		<center>時間</center>
+		</div>
+		<div style="width:150px; background:#F8F8F8; border:#C9C9C9 1px solid; float:left; line-height:36px">
+		<center>講師</center>
+		</div>
+		
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course_u WHERE u_id='$lfjuid' and ktime<'$timestamp' ORDER BY ktime ASC LIMIT 50");
+while($rss = $db->fetch_array($query)){
+$rss[ktime] = date("Y年m月d日 H:i",$rss[ktime]);
+print <<<EOT
+-->
+		<div style="width:196px; background:#fff; border-bottom:#C9C9C9 1px solid; border-left:#C9C9C9 1px solid; border-right:#C9C9C9 1px solid; float:left; padding:10px 0; height:40px">
+		<center>$rss[ktime]</center>
+<!--
+EOT;
+if($rss[quality]==''){
+print <<<EOT
+-->
+		<center><a href="###" onclick="openShutManager(this,'boxs$rss[id]',false,'報告的通話質量','報告的通話質量')">報告的通話質量</a></center>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+		<center><img border="0" src="$webdb[www_url]/member/images/star$rss[quality].gif" width="84" height="16"></center>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+		</div>
+		<div style="width:150px; background:#fff; border-bottom:#C9C9C9 1px solid; border-right:#C9C9C9 1px solid; float:left; padding:10px 0; height:40px">
+		<center><a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[t_id]" target="_blank">$rss[t_name]</a></center>
+<!--
+EOT;
+if($rss[eva]==''){
+print <<<EOT
+-->
+<center><a href="###" onclick="openShutManager(this,'box$rss[id]',false,'講師的評價','講師的評價')">講師的評價</a></center>
+
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<center><span style="font-weight:bold">$rss[eva]</span></center>
+
+		</div>
+
+	
+	<div id="box$rss[id]" style="display:none; background:#F8F8F6; padding:3px 10px; clear:both; border:#C9C9C9 1px solid; border-top:none;">
+	<form action="map.php" method="POST">
+<a href="###" onclick="openShutManager(this,'box$rss[id]',false,'關閉','關閉')" style="float:right">關閉</a>
+<center>
+日期和時間：$rss[data] $rss[time] <br />
+講師：$rss[t_name] <br />
+我對講師的評價： <br />
+<input type="radio" name="eva" value="Good" checked> <strong>Good </strong>
+<input type="radio" name="eva" value="Bad"> <strong> Bad</strong>
+</center>
+評價： <br />
+<textarea name="evas" style="height:50px; width:325px"></textarea>
+    <p style="color:#FF0000">※此評估的目的是評估學生的課程和教師。<br />
+問君能有您評估使用，<a href="###" onclick="openShutManager(this,'boxs$rss[id]',false,'報告的通話質量','報告的通話質量')">報告的通話質量</a>如語音和視頻過程中的經驗教訓。</p>		
+<center>
+你喜歡嗎？
+</center>
+<center>
+<p>
+<input type="submit" value=" 提 交 ">
+</p>
+</center>
+		<input type="hidden" name="job" value="eva">
+		<input type="hidden" name="id" value="$rss[id]">
+		</form>
+		</div>
+	
+	<div id="boxs$rss[id]" style="display:none; background:#D4E0E6; padding:3px 10px; clear:both; border:#C9C9C9 1px solid; border-top:none;">
+	<form action="map.php" method="POST">
+<a href="###" onclick="openShutManager(this,'boxs$rss[id]',false,'關閉','關閉')" style="float:right">關閉</a>
+<center>
+日期和時間：$rss[data] $rss[time] <br />
+講師：$rss[t_name] <br />
+我報告的通話質量： <br /> <br />
+</center>
+
+<input type="radio" name="quality" value="5" checked> <img border="0" src="$webdb[www_url]/member/images/star5.gif" width="84" height="16"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 視頻和音頻能參加集中非常明確 <br /><br />
+<input type="radio" name="quality" value="4" /> <img border="0" src="$webdb[www_url]/member/images/star4.gif" width="84" height="16"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 視頻和音頻清晰 <br /><br />
+<input type="radio" name="quality" value="3" /> <img border="0" src="$webdb[www_url]/member/images/star3.gif" width="84" height="16"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 這是一個水平沒有問題的視頻和音頻 <br /><br />
+<input type="radio" name="quality" value="2" /> <img border="0" src="$webdb[www_url]/member/images/star2.gif" width="84" height="16"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 是視頻和音頻的失真 <br /><br />
+<input type="radio" name="quality" value="1" /> <img border="0" src="$webdb[www_url]/member/images/star1.gif" width="84" height="16"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 這是這麼多的視頻和音頻的干擾，不能繼續上課 <br />
+
+
+    <p style="color:#FF0000">如果用戶的通話質量不夠好，無法繼續教訓，請聯繫英語辦公室迅速。</p>		
+<center>
+<p>
+<input type="submit" value=" 提 交 ">
+</p>
+</center>
+		<input type="hidden" name="job" value="quality">
+		<input type="hidden" name="id" value="$rss[id]">
+		</form>
+		</div>
+	
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+</div>
+
+
+</div>
+
+
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+</div>  
+</div>
+    </div>
+
+</div>
+
+<!--
+EOT;
+?>
+-->

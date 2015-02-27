@@ -1,0 +1,8278 @@
+<!--
+<?php
+$rsdb[price] || $rsdb[price]='';
+print <<<EOT
+--> 
+<div style="float:right; width:750px;">
+<span style="float:left"><a href="$webdb[www_url]/bencandy.php?fid=$rsdb[fid]&id=$rsdb[id]&dates=$press">上一组</a></span>
+<span style="float:right"><a href="$webdb[www_url]/bencandy.php?fid=$rsdb[fid]&id=$rsdb[id]&dates=$nexss">下一组</a></span>
+</div>
+<div style="float:right; width:750px; background:url($webdb[www_url]/images/time_list.jpg) repeat-y">
+<div style="float:left; width:688px; display:block; text-align:left; padding-left:63px;">
+
+
+<div style="float:left; border-top:#CDCDCD 1px solid; border-bottom:#DDDDDD 1px solid; height:2450px; width:172px">
+<div style="width:150px; height:131px; padding:10px; border-bottom:#CCCCCC 2px solid;">
+<div style="line-height:40px; text-align:right; font-weight:bold; font-size:14px; color:#CBCBCB">{$timesy}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:40px; color:#838383">{$times_w}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:30px; color:#838383">{$timesd}</div>
+</div>
+
+ 
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='06:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='06:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='06:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='07:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='07:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='07:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='08:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='08:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='08:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='09:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='09:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='09:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='10:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='10:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='10:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='11:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='11:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='11:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='12:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='12:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='12:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='13:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='13:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='13:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='14:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='14:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='14:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='15:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='15:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='15:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='16:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='16:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='16:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='17:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='17:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='17:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='18:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='18:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='18:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='19:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='19:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='19:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='20:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='20:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='20:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='21:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='21:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='21:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='22:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='22:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='22:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='23:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='23:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='23:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='24:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='24:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 0px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times]' and time='24:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+</div>
+
+
+
+<div style="float:left; border-top:#CDCDCD 1px solid; border-bottom:#DDDDDD 1px solid; height:2450px; width:172px">
+<div style="width:150px; height:131px; padding:10px; border-bottom:#CCCCCC 2px solid;">
+<div style="line-height:40px; text-align:right; font-weight:bold; font-size:14px; color:#CBCBCB">{$times1y}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:40px; color:#838383">{$times1_w}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:30px; color:#838383">{$times1d}</div>
+</div>
+
+ 
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='06:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='06:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='06:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='07:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='07:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='07:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='08:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='08:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='08:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='09:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='09:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='09:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='10:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='10:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='10:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='11:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='11:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='11:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='12:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='12:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='12:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='13:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='13:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='13:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='14:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='14:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='14:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='15:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='15:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='15:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='16:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='16:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='16:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='17:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='17:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='17:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='18:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='18:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='18:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='19:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='19:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='19:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='20:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='20:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='20:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='21:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='21:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='21:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='22:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='22:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='22:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='23:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='23:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='23:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='24:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='24:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 0px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times1]' and time='24:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+</div>
+
+
+
+<div style="float:left; border-top:#CDCDCD 1px solid; border-bottom:#DDDDDD 1px solid; height:2450px; width:172px">
+<div style="width:150px; height:131px; padding:10px; border-bottom:#CCCCCC 2px solid;">
+<div style="line-height:40px; text-align:right; font-weight:bold; font-size:14px; color:#CBCBCB">{$times2y}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:40px; color:#838383">{$times2_w}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:30px; color:#838383">{$times2d}</div>
+</div>
+
+ 
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='06:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='06:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='06:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='07:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='07:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='07:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='08:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='08:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='08:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='09:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='09:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='09:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='10:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='10:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='10:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='11:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='11:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='11:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='12:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='12:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='12:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='13:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='13:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='13:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='14:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='14:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='14:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='15:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='15:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='15:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='16:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='16:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='16:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='17:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='17:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='17:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='18:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='18:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='18:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='19:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='19:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='19:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='20:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='20:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='20:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='21:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='21:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='21:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='22:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='22:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='22:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='23:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='23:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='23:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='24:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='24:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 0px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times2]' and time='24:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+</div>
+
+
+
+
+<div style="float:left; border-top:#CDCDCD 1px solid; border-bottom:#DDDDDD 1px solid; height:2450px; width:172px">
+<div style="width:150px; height:131px; padding:10px; border-bottom:#CCCCCC 2px solid;">
+<div style="line-height:40px; text-align:right; font-weight:bold; font-size:14px; color:#CBCBCB">{$times3y}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:40px; color:#838383">{$times3_w}</div>
+<div style="line-height:40px; text-align:center; font-weight:bold; font-size:30px; color:#838383">{$times3d}</div>
+</div>
+
+ 
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='06:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='06:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='06:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='07:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='07:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='07:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='08:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='08:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='08:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='09:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='09:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='09:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='10:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='10:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='10:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='11:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='11:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='11:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='12:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='12:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='12:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='13:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='13:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='13:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='14:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='14:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='14:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='15:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='15:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='15:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='16:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='16:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='16:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='17:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='17:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='17:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='18:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='18:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='18:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='19:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='19:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='19:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='20:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='20:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='20:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='21:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='21:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='21:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='22:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='22:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='22:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='23:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='23:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 2px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='23:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='24:00' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#DDDDDD 1px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='24:20' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+<div style="float:left; width:170px; height:32px; border-bottom:#CCCCCC 0px solid; padding-top:7px; text-align:center">			
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course WHERE data='$rsdbs[times3]' and time='24:40' and t_id='$rsdb[id]'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[book]>'0'){
+print <<<EOT
+-->
+<img src='$webdb[www_url]/images/btn_close.png' border=0>
+<!--
+EOT;
+}elseif($rss[ktime]<$timestamp){
+print <<<EOT
+-->
+
+<!--
+EOT;
+}elseif($rss[book]=='0'){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/lesson.php?id=$rss[id]"><img src='$webdb[www_url]/images/btn_open.png' border=0></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+}
+print <<<EOT
+-->		
+</div>
+</div>
+
+
+
+
+</div>			
+</div>
+222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+<!--
+EOT;
+?>
+-->

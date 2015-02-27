@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+<?php
+print <<<EOT
+-->
+<head>
+<title>會員中心</title>
+<link rel="stylesheet" type="text/css" href="images/default/css.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+<script type="text/javascript">
+function SetCwinHeight(){
+	var obj=document.getElementById("member_mainiframe"); //iframe id
+	if (document.getElementById){
+		if (obj && !window.opera){
+			if (obj.contentDocument && obj.contentDocument.body.offsetHeight){
+				obj.height = obj.contentDocument.body.offsetHeight;
+			}else if(obj.Document && obj.Document.body.scrollHeight){
+				obj.height = obj.Document.body.scrollHeight;
+			}
+			if(obj.height<800){
+				obj.height=800;
+			}
+		}else {
+			obj.height = 1000;
+		}
+		//navigator.userAgent.toLowerCase().indexOf("msie 8.0") != -1
+		//obj.document.getElementById("footer").style.display='none';
+	}
+}
+</script>
+<body>
+<div id="TopDiv">
+<ul>
+	<li><a href="$webdb[www_url]">首頁</a></li> 
+	<li><a href="$webdb[www_url]/list.php?fid=1">講師</a></li> 
+</ul>
+</div>
+<div id="Iframe"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="header">
+    <tr> 
+      <td> 
+        <div class="Logo"><a href="index.php?SystemId=$SystemId"><img src="images/default/logo.gif"></a></div>
+        <div class="welcome">
+            您好,$lfjid 
+            <a HREF="homepage.php?uid=$lfjuid" target="_blank">個人信息</a> 
+            <a href="$webdb[www_url]/do/login.php?action=quit">登出</a>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="MainContainer">
+    <tr> 
+      <td class="LeftMenu">     
+      	
+        <dl id="TheDl1" class="Show"> 
+           <dt onclick='showson("TheDl1")'>個人資料</dt>
+<!---->
+          <dd><A HREF='userinfo.php?job=edit' onclick="self.scroll(0,0);" target='member_mainiframe'>脩改個人資料</A></dd>
+<!---->
+          <dd><A HREF='pm.php?job=list' onclick="self.scroll(0,0);" target='member_mainiframe'>站内短消息</A></dd>
+<!---->
+          <dd><A HREF='money.php?job=list' onclick="self.scroll(0,0);" target='member_mainiframe'>積分充值</A></dd>
+<!---->
+          <dd><A HREF='buygroup.php?job=list' onclick="self.scroll(0,0);" target='member_mainiframe'>會員昇級</A></dd>
+<!---->
+          <dd><A HREF='yz.php?job=email' onclick="self.scroll(0,0);" target='member_mainiframe'>郵箱驗證</A></dd>
+<!---->
+        </dl>
+
+        <dl id="TheDl3" class="Show"> 
+           <dt onclick='showson("TheDl3")'>講師</dt>
+<!---->
+          <dd><A HREF='http://localhost:8042/f/member/list.php' onclick="self.scroll(0,0);" target='member_mainiframe'>預約琯理</A></dd>
+<!---->
+          <dd><A HREF='http://localhost:8042/f/member/collection.php' onclick="self.scroll(0,0);" target='member_mainiframe'>我的收藏</A></dd>
+<!---->
+          <dd><A HREF='http://localhost:8042/f/member/comment.php?job=mylist' onclick="self.scroll(0,0);" target='member_mainiframe'>評價琯理</A></dd>
+        </dl>
+
+
+
+      </td>
+      <td class="RightMain">      
+      	<iframe width="100%" name="member_mainiframe" id="member_mainiframe" height="100"  onload="Javascript:SetCwinHeight();self.scroll(0,0);" scrolling="no" marginwidth=0 marginheight=0 frameborder="0" src="$MainUrl"></iframe>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" id="copyright">
+    <tr> 
+      <td>
+        {$webdb[copyright]}<br>
+      </td>
+    </tr>
+  </table>
+</div>
+<SCRIPT language=javascript>
+<!--
+function showson(ss){
+	if (document.getElementById(ss).className=='hidden'){
+		document.getElementById(ss).className = 'Show';
+	}else{
+		document.getElementById(ss).className = 'hidden';
+	}
+}
+
+var objDl=document.getElementById("SideMenu").getElementsByTagName("dl");
+function ShowAll(){	
+	for(var i=0;i< objDl.length;i++ ){
+		objDl[i].className='Show';
+	}
+}
+function HiddenAll(){	
+	for(var i=0;i< objDl.length;i++ ){
+		objDl[i].className='';
+	}
+}
+//-->
+</script>
+
+</SCRIPT>
+</body>
+</html>
+<!--
+EOT;
+?>
+-->

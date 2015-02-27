@@ -1,0 +1,163 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width='100%' cellspacing='1' cellpadding='3' class="tablewidth">
+  <form name="form1" method="post" action="$admin_path&action=config">
+    <tr class="head"> 
+      <td colspan='2'> 
+        <div align='center'><b><font color="#FFFFFF">伪静态设置</font></b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>伪静态的形式:<br>
+        <font color="#FF0000">注意: </font>选择伪静态前,需要先修改服务器配置,否则網站前台页面会访问出错</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="radio" name="webdbs[Info_htmlType]" value="0" $Info_htmlType[0]>
+        动态(非伪静态) 
+        <input type="radio" name="webdbs[Info_htmlType]" value="1" $Info_htmlType[1]>
+        普通伪静态 
+        <input type="radio" name="webdbs[Info_htmlType]" value="2" $Info_htmlType[2]>
+        高级伪静态(类似58同城与赶集網那样的形式) </td>
+    </tr>
+	
+	<!--
+EOT;
+if(in_array('fenlei',$BIZ_MODULEDB)){
+print<<<EOT
+-->
+    <tr>
+      <td width='26%' bgcolor='#FFFFFF'>髮布页是否使用伪静态</td>
+      <td bgcolor='#FFFFFF' width="74%">
+        <input type="radio" name="webdbs[post_htmlType]" value="0" $post_htmlType[0]>不使用
+		
+		<input type="radio" name="webdbs[post_htmlType]" value="1" $post_htmlType[1]>使用
+      </td>
+    </tr>
+
+	<!--
+EOT;
+}print <<<EOT
+-->
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>伪静态文件名:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[Info_htmlname]" size="8" value="$webdb[Info_htmlname]">
+        一般是“html”,“htm”,默认是“html”</td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>&nbsp;</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input    type='submit' name='w' value='保存设置'>
+      </td>
+    </tr>
+  </form>
+</table>
+<!--
+EOT;
+?>
+-->
+<table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+   <tr>       
+    <td class="head">说明:</td>
+  </tr>
+  <tr>
+    <td>1.要使用伪静态的话,妳需要修改apache或IIS的配置文件,如果是單城市版就添加&quot;單城市版伪静态规则&quot;,如果是多城市版就添加&quot;多城市版伪静态规则&quot;<br>
+      <br>
+      2.單城市版注意事项: 想使用高级伪静态的话,首先必须要确认分类栏目的目录名第一個字母是大寫.否则会出错,无法访问網页. <br>
+      <br>
+      3.多城市版注意事项:如果妳想实现 http://benjing.abc.com这样城市域名,那必须要在域名琯理商那里设置一個泛域名 *.abc.com 
+      指向到當前服务器的IP,一般设置後不会马上生效，要等一段時間。<br>
+      <br>
+      4.启用伪静态前,請點擊头部菜單"分类目录批量生成標准目录名",一次性把所有分类栏目生成標准的目录名.这不会创建目录,只是更新数据库.<br>
+      <br>
+      5.如果是多城市版,启用伪静态前,妳还要點擊头部菜單"城市批量生成目录文件",一次性把所有城市生成目录文件.每個城市都会生成一個單独的目录.<br>
+      <br>
+      6.修改服务器配置後,需要重启一下服务器,伪静态才能生效的. </td>
+  </tr>
+</table>
+<table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+   <tr>       
+    <td class="head">apache服务器伪静态配置说明:</td>
+  </tr>
+  <tr>
+    <td><font color="#FF0000">第一种</font>.如果是多城市版分类并且使用了城市二级域名即(多城市+多域名),請修改apache的配置文件,把以下代碼添加到配置文件的最後一行即可,注意把qibosoft.com换成妳的域名,其它不变.<br>
+      <FIELDSET><LEGEND>多城市版并且使用了城市二级域名伪静态规则(多城市版+城市二级域名)</LEGEND> <br>
+      <br>
+      &lt;VirtualHost *:80&gt;<br>
+      ServerName test.qibosoft.com<br>
+      ServerAlias *.qibosoft.com<br>
+      DocumentRoot <?php echo substr(ROOT_PATH,0,-1);?><br>  
+      
+      &lt;IfModule mod_rewrite.c&gt;<br>
+      RewriteEngine On<br>
+      RewriteRule ^/([^\/]+)/f([^\/]+)\.([a-zA-Z0-9]+)$ /bencandy\.php\?Fid=$1&amp;Id=$2<br>
+      RewriteRule ^/([^\/]+)/$ /list\.php\?Fid=$1<br>
+      RewriteRule ^/([^\/]+)/([^\/]+)/$ /list\.php\?Fid=$2&amp;zone_street=$1<br>
+      RewriteRule ^(.*)/(list|bencandy)-([^\/]+)\.([a-zA-Z0-9]+)$ $1/$2\.php\?stringID=$3<br>
+      RewriteRule ^(.*)/post.htm$ $1/post\.php<br>
+      RewriteRule ^(.*)/post-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?fid=$2&amp;city_id=$3<br>
+      RewriteRule ^(.*)/post-edit-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?job=edit&amp;fid=$2&amp;id=$3<br>
+      RewriteRule ^(.*)/post-del-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?action=del&amp;fid=$2&amp;id=$3<br>
+      &lt;/IfModule&gt;<br>
+      &lt;/VirtualHost&gt; </FIELDSET> <br>
+	  
+	  多城市版分类并且使用了城市二级域名即(多城市+多域名)除以上方法外,还有以下另一种方法<br>
+      把“<font color="#0000FF">Include 
+      <?=$Adminpath?>
+      </font>”加到apache配置文件的最後一行即可。如果使用了这种方法就不要使用上面这种方法，不能冲突的，只能使用其中一种。一般推荐使用这种，如果是購買的虚拟空間，空間商一般不允许妳使用这种，那么只能使用上面那种<br>
+	  <br><br><br><hr size=1>
+      <br>
+      <font color="#FF0000">第二种</font>.多城市版但不使用城市二级域名而只使用现有的域名即（多城市+非多域名）,請修改apache的配置文件,查找當前域名 
+      <?php echo $HTTP_HOST;?>
+      所在的位置把以下代碼插入到他下面一行即可<FIELDSET><LEGEND>多城市版伪静态规则</LEGEND> RewriteRule ^(.*)/(list|bencandy)-([-_0-9a-zA-Z]+)\.([a-zA-Z0-9]+)$ 
+      $1/$2\.php\?stringID=$3<br>
+      RewriteRule ^(.*)/([A-Z])([^\/]+)/([^\/]+)/f([^\/]+)\.([a-zA-Z0-9]+)$ $1/$2$3/bencandy\.php\?Fid=$4&amp;Id=$5<br>
+      RewriteRule ^(.*)/([A-Z])([^\/]+)/([^\/]+)/([^\/]+)/$ $1/$2$3/list\.php\?Fid=$5&amp;zone_street=$4<br>
+      RewriteRule ^(.*)/([A-Z])([^\/]+)/([^\/]+)/$ $1/$2$3/list\.php\?Fid=$4<br>
+      RewriteRule ^(.*)/post.htm$ $1/post\.php<br>
+      RewriteRule ^(.*)/post-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?fid=$2&amp;city_id=$3<br>
+      RewriteRule ^(.*)/post-edit-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?job=edit&amp;fid=$2&amp;id=$3<br>
+      RewriteRule ^(.*)/post-del-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?action=del&amp;fid=$2&amp;id=$3</FIELDSET><br>
+      <br>
+      <br><hr size=1>
+      <br>
+      <font color="#FF0000">第三种</font>.單城市版,請修改apache的配置文件,查找當前域名 
+      <?php echo $HTTP_HOST;?>
+      所在的位置把以下代碼插入到他下面一行即可 <FIELDSET><LEGEND>單城市版伪静态规则</LEGEND> RewriteEngine 
+      On<br>
+      RewriteRule ^(.*)/(list|bencandy)-([-_0-9a-zA-Z]+)\.([a-zA-Z0-9]+)$ $1/$2\.php\?stringID=$3<br>
+      RewriteRule ^(.*)/([A-Z])([^\/]+)/f([^\/]+)\.([a-zA-Z0-9]+)$ $1/bencandy\.php\?Fid=$2$3&amp;Id=$4<br>
+      RewriteRule ^(.*)/([A-Z])([^\/]+)/([^\/]+)/$ $1/list\.php\?Fid=$4&amp;zone_street=$2$3<br>
+      RewriteRule ^(.*)/([A-Z])([^\/]+)/$ $1/list\.php\?Fid=$2$3<br>
+      RewriteRule ^(.*)/post.htm$ $1/post\.php<br>
+      RewriteRule ^(.*)/post-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?fid=$2&amp;city_id=$3<br>
+      RewriteRule ^(.*)/post-edit-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?job=edit&amp;fid=$2&amp;id=$3<br>
+      RewriteRule ^(.*)/post-del-([0-9]+)-([0-9]+)\.htm$ $1/post\.php\?action=del&amp;fid=$2&amp;id=$3 
+      </FIELDSET> <br>
+	   （單城市版）与（多城市+非多域名）即以上第二、三种情况，注意事项:想使用高级伪静态的话,首先必须要确认分类栏目的目录名第一個字母是大寫.否则会出错,无法访问網页.  <br>
+      <FIELDSET><LEGEND></LEGEND></FIELDSET></td>
+  </tr>
+</table>
+<table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+   <tr>       
+    <td class="head">IIS服务器伪静态配置说明:</td>
+  </tr>
+  <tr>
+    <td>請严格执行以下每一步操作:<br>
+      进入IIS琯理器设置界面,新建一個站點, <br>
+      描述:随意即可 <br>
+      網站IP地阯:默认即可 <br>
+      端口:默认80即可 <br>
+      此網站的主机头:留空,一定要留空,否则就不支持绑定泛域名了.这一项是最关键的.并且确认之前没有设置过主机头为空的站點,一台服务器只能设置一個. <br>
+      路径是: 
+      <?php echo ROOT_PATH;?>
+      <br>
+      创建完成之後,下载伪静态组件,點擊下载<a href="http://down.qibosoft.com/rewrite.rar">http://down.qibosoft.com/rewrite.rar</a>,然後解压放到C盘里的任意一個目录即可，<br>
+      再點擊新建的站點，右键选择属性.选择ISAPI筛选器,點擊添加,可执行文件即是解压後的Rewrite.dll所在的路径,筛选器名称为Rewrite 
+      <br>
+      然後确定保存,再重启一下此站點即可. <br>
+      <br>
+      注意，伪静态组件解压後默认的配置文件是多城市版多域名的，如果妳是單城市版或者是其它的，进入相应的目录复制出替换DLL目录的配置文件即可。</td>
+  </tr>
+</table>

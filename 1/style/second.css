@@ -1,0 +1,81 @@
+.part {overflow:hidden;clear:both;margin-top:8px;position:relative;}
+.main-left {float:left;width:722px;position:relative;height:736px;}
+.main-left .part .part-bar {border-bottom:1px #1e79bf solid;padding-bottom:8px;color:#666;}
+.main-left .part .part-bar h2 {padding:0 8px;height:16px;line-height:16px;color:#009cd9;border-left:4px #009cd9 solid;}
+.main-left .part .part-bar span {font-weight:normal;color:#009cd9;padding:0 2px;}
+.main-left .part .part-cont {padding:8px 0;}
+.main-right {width:245px;float:right;}
+.main-right .part {margin-top:6px;}
+.main-right .part1 {margin-top:8px;}
+.main-right .part1 .part-cont {background:url(../images/mr-part1-bg.jpg) no-repeat;height:197px;}
+.main-right .part1 .part-cont ul {padding:140px 12px 0 12px;}
+.main-right .part1 .part-cont ul li {float:left;margin:0 5px;}
+.main-right .part1 .part-cont ul li a {display:block;width:45px;height:45px;}
+.main-right .part1 .part-cont li.li01 {background:url(../images/msn.gif)}
+.main-right .part1 .part-cont li.li02 {background:url(../images/skype.gif)}
+.main-right .part1 .part-cont li.li03 {background:url(../images/qq.gif);}
+.main-right .part1 .part-cont li.li04 {background:url(../images/facebook.gif);}
+.main-right .part2 {background:url(../images/sentence-bg.jpg) no-repeat;}
+.main-right .part2 .part-cont {vertical-align:middle;display:table-cell;width:245px;background:url(../images/sentence-bg2.jpg) no-repeat 0 bottom;}
+.main-right .part2 td {text-align:center;width:225px;display:inline-block;line-height:1.6;min-height:65px;_height:65px;padding:10px;padding-top:25px;}
+.main-right .part3 ,.main-right .part4 {border:1px #0087bc solid;width:243px;}
+.main-right .part3 .part-bar,
+.main-right .part4 .part-bar {background:#0087bc;color:#fff;padding-left:8px;}
+.main-right .part3 .part-cont ,.main-right .part4 .part-cont {padding:5px 8px;}
+.main-right .part3 .part-cont li,
+.main-right .part4 .part-cont li {width:213px;height:24px;overflow:hidden;white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; background:url(../images/licon.gif) no-repeat 0 8px;padding-left:10px;}
+.main-right .part4 .part-cont li a {display:inline;float:left;}
+.main-right .part5 p {border:#0087bc 1px solid;margin-bottom:5px;}
+
+.teacher {overflow:hidden;line-height:26px;margin-top:8px;}
+.tcpic,.tcinfo {float:left;display:inline;}
+.tcpic img {margin:5px 0;float:left;}
+.tcinfo {padding:0 10px;width:632px;padding-right:0;}
+.tcinfo li {background:url(../images/secli-ico.gif) no-repeat left 5px;padding-left:15px;}
+
+/*分页*/
+.page {overflow:hidden;clear:both;position:absolute;bottom:0;left:0;}
+.page li {float:left;background:url(../images/page-bg.gif) 0 0;display:inline;margin:0 1px;}
+.page li a {display:block;padding:0 2px;margin-left:2px;background:url(../images/page-bg.gif) right 0;height:16px;line-height:16px;min-width:12px;_width:12px;text-align:center;overflow:hidden;}
+.page .first, .page .end {width:26px;padding-top:2px;height:14px;line-height:14px;}
+.page li.current {background:url(../images/page-current-bg.gif) 0 0;}
+.page li.current a {background:url(../images/page-current-bg.gif) right 0;color:#fff;}
+/*在线报名*/
+.Submitform {border:1px #ccc solid;border-top:none;}
+.Submitform td {border-top:1px #ccc solid;}
+
+/*支付頁面*/
+.main-pay-online {height:420px;}
+.pay-online-form {margin:80px auto 10px auto;border:1px #bbb solid;width:300px;height:200px;line-height:42px;padding:15px;}
+.bank-transfer .main-left ul {margin-bottom:8px;margin-top:10px;}
+/*关于我们*/
+.main-aboutus .part-cont h3 {font-size:12px;line-height:1.8;display:inline-block;padding:3px 10px;clear:both;margin-bottom:8px;background:#0088bc;color:#fff;}
+.main-aboutus .part-cont ul {line-height:2.0;}
+.main-aboutus .part-cont .ul01 {overflow:hidden;}
+.main-aboutus .part-cont .ul01 .left {width:530px;}
+.main-aboutus .part-cont .ul02 {overflow:hidden;}
+.main-aboutus .part-cont .ul02 .right {width:510px;}
+.subform li {border-top:1px #ddd solid;margin:5px 0;}
+
+/*学员心得*/
+.main-testimonials .testimonials-cont {text-indent:2em;line-height:26px;}
+.main-testimonials .part-cont-left {float:left;margin-right:10px;}
+.main-testimonials .part-cont-left .pic {padding:2px;border:1px #ddd solid;}
+.main-testimonials .part-cont-left .name, .main-testimonials .part-cont-left .studytime {text-align:center;font-weight:bold;color:#555;}
+
+/**/
+.word_12_grr_23 {border:1px #ccc solid;border-right:none;}
+.word_12_grr_23 td {border-bottom:1px #ccc solid;border-right:1px #ccc solid;padding:2px 10px;}
+.word_12_grr_23 p {border-right:1px #ccc solid;}
+/*英日文范例*/
+.janpexample dl {margin-left:20px;float:left;color:#666;overflow:hidden;margin:10px 0;background:url(../images/Languag2.jpg) no-repeat 0 center;padding-left:200px;}
+.janpexample dl dt {clear:both;float:left;margin-top:10px;}
+.janpexample h2 {font-size:16px;background:url(../images/janfl-ico.gif) 0 9px no-repeat;padding-left:10px;margin-bottom:5px;}
+.janpexample dl h3 {font-size:16px;color:#0087bc;background:none;float:none;}
+.janpexample dl dd {float:left;width:440px;line-height:18px;margin-left:10px;margin-top:8px;}
+.janpexample dl dd span {font-size:14px;font-weight:bold;}
+.janpexample .student {width:30px;text-align:center;display:block;background:#00ccff;color:#fff;padding:0 5px;}
+.janpexample .techer {width:30px;text-align:center;display:block;background:#ff9933;color:#fff;padding:0 5px;}
+.enexample dl dd span {font-size:18px;}
+.enexample dl {background:url(../images/Languag.jpg) no-repeat 0 center;}
+

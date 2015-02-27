@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/*------------------------------------------------------------
+import style
+------------------------------------------------------------*/
+
+@import url("base_old.css");
+@import url("navi.css");
+@import url("layout_old.css");
+
+.teacher img{width:70px; height:50px; display:block; float:left}
+.teacher a{width:70px; height:50px; display:block; float:left; padding-right:3px; padding-bottom:4px}

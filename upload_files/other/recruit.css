@@ -1,0 +1,67 @@
+@charset "UTF-8";
+body  {
+	padding: 0;
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+#recruit {
+	width: 710px;
+	font-size: 14px;
+	line-height: 1.5em;
+	color: #333333;
+	float:left;
+}
+#recruit img {
+	border: none;
+}
+
+.title {
+	text-align: center;
+	padding-bottom: 20px;
+}
+.bosyu {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.syokusyu {
+	float: left;
+	width: 349px;
+	background-color: #CDEFF9;
+	margin-right: 12px;
+}
+.syokusyu_right {
+	float: left;
+	width: 349px;
+	background-color: #CDEFF9;
+}
+.syokusyu_txt {
+	background-color: #CDEFF9;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	margin-bottom: 15px;
+}
+.syokusyu_txt p {
+	font-size: 18px;
+	color: #00ACE2;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 0px;
+}
+.table01 {
+	background-color: #CDEFF9;
+	border-left-style: solid;
+	border-left-color: #00ACE2;
+	border-left-width: 10px;
+	width: 20%;
+}
+.table02 {
+	background-color: #E6E6E6;
+	width: 80%;
+}

@@ -1,0 +1,72 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table id="top_menu" width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth" align="center">
+  <tr> 
+    <td align="center"> 
+      <input type="button" name="Submit222" value="添加广告位" onClick="window.location=('$admin_path&job=addplace')">
+      　　　 
+      <input type="button" name="Submit23" value="广告位琯理" onClick="window.location=('$admin_path&job=listad')">
+      　　
+      <input type="button" name="Submit23" value="購買广告" onClick="window.open('../member/index.php?main=../$dirname/member/norm.php?job=list')">
+    　　 　 </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <tr class="head" align="center"> 
+    <td width="44%">广告位名称</td>
+    <td width="16%">广告类型</td>
+    <td width="6%">點擊</td>
+    <td width="8%">调用代碼</td>
+    <td width="13%">预览 修改 删除</td>
+  </tr>
+  <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+  <tr bgcolor="#FFFFFF" class="trA" onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+    <td width="44%">$rs[name]</td>
+    <td width="16%" align="center">{$array_adtype[$rs[type]]}</td>
+    <td width="6%" align="center">$rs[hits]</td>
+    <td width="8%" align="center"> 
+      <input type="hidden" name="hiddenField" value="<SCRIPT LANGUAGE='JavaScript' src='$webdb[www_url]/$dirname/a_d_s.php?job=js&ad_id={$rs[keywords]}'></SCRIPT>" id="ja_$rs[id]">
+      <a href="#" onClick="JM_cc('ja_$rs[id]');alert('代碼复制成功，妳可以粘贴在網页里需要显示的地方,即可显示广告！')"> 
+      <img alt='' src='../member/images/art_icon.gif' border=0></a></td>
+    <td width="13%" align="center"><a href="$rs[demourl]" target="_blank"><img src="../member/images/icon_view.gif" border="0"></a>&nbsp; 
+      <a href="$admin_path&job=editadplace&id=$rs[id]"><img alt='點擊修改' src='../member/images/button_edit.png' border=0></a> 
+      &nbsp; <a href="$admin_path&id=$rs[id]&action=deleteadplace" onclick="return confirm('妳确认要删除这個广告吗?')"><img alt='點擊删除' src='../member/images/del_icon2.gif' border=0></a></td>
+  </tr>
+  <!--
+EOT;
+}
+print <<<EOT
+-->
+</table>
+<br>
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <tr class="head" align="center"> 
+    <td align="left">说明</td>
+  </tr>
+   
+  <tr bgcolor="#FFFFFF"> 
+    <td style="line-height:24px;">1.本广告系统支持跨系统(ASP，PHP，JSP等等網站系统)、跨網站(任何域名的網站)。即除了在本系统使用外，还允许妳把广告<font color="#FF0000"></font>插入到其它任何網站的網页里边。<br>
+      2.使用方法，點擊上面的调用代碼<img src="../member/images/art_icon.gif">图標，就会自动复制一段代碼，然後把这段代碼贴到網页里边即可。當然也可以贴到標签里边去。<br>
+      3.另外有一點大家值得注意的是,广告也是網页的元素之一,换個思路分析问題,當某些页面无法使用標签的情况下,可以用广告的方式调用显示图片等元素.<br>
+      4.特别说明，點擊率，仅能统计文字跟图片的點擊，FLASH与其它JS无法统计.<br>
+      5.代碼广告最好不要给用户購買,防止用户提交恶意代碼.當然如果妳想给用户購買的话，最好设置成琯理员审核後才可以显示。</td>
+  </tr>
+   
+</table><SCRIPT LANGUAGE="JavaScript">
+<!--
+function JM_cc(ob){
+var obj=document.getElementById(ob); if (obj) { 
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

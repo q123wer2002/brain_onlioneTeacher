@@ -1,0 +1,67 @@
+<!--
+<?php
+print <<<EOT
+-->
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">講師收藏</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>講師收藏</li>
+  </ul>
+<div style="float:right; width:710px">
+<style>
+.listsort{
+	width:177px;
+	height:160px;
+	background:url($webdb[www_url]/member/images/default/sortbg.gif) center top no-repeat;
+	float:left;
+	margin-top:8px;
+	position:relative;
+}
+.listsort div{
+	padding:0 30px 0 30px;
+	line-height:50px;
+	color:#777;
+	text-align:center;
+}
+.listsort div.m{
+	padding-top:20px;
+}
+.listsort a{
+	color:#666666
+}
+</style>
+
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$rs[Lurl]=get_info_url('',$rs[fid],$rs[city_id]);
+print <<<EOT
+-->
+  <div class="listsort">
+  <div class="m"><a href="$webdb[www_url]/bencandy.php?fid=1&id=$rs[id]" target="_parent"><img src="$rs[picurl]" width="120"></a></div>
+  <div class="c"><a href="$webdb[www_url]/bencandy.php?fid=1&id=$rs[id]" target="_parent"><span>$rs[title]</span></a></div>
+  <a href="?do=del&cid=$rs[cid]" onclick="{if(confirm('確認要取消收藏講師 $rs[title] 嗎？')){return true;}return false;}" style="position:absolute; right:10px; top:5px"><img src="$webdb[www_url]/member/images/button_drop.png"></a>
+  </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+</div>  
+</div>
+    </div>
+
+</div><!--
+EOT;
+?>
+-->

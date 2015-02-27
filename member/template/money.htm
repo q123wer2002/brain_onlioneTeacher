@@ -1,0 +1,170 @@
+<!--
+<?php
+if($job=="record"){
+print <<<EOT
+--> 
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+<style>
+.btn_orange{
+  border:none;
+  text-align:center;
+  font-size:20px;
+  color:#FFFFFF;
+  font-weight:bold;
+  line-height:35px;
+  background-color:#ff8400;
+  box-shadow:0px 8px 15px -5px #fed9b0 inset;
+  box-shadow:0px 0px 7px 0px #ff8400;
+  behavior:url("../js/PIE.htc");
+  position:relative;
+  cursor:pointer;
+}
+</style>
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">付款記录</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>付款記录</li>
+  </ul>
+<div style="float:right; width:710px">
+
+
+
+
+
+            <table width="710" border="0" cellspacing="1" cellpadding="6">
+              <tr align="center" class="head_in"> 
+                <td width="20%" style="background:#F8F8F8">付款訂單號</td>
+                <td width="21%" style="background:#F8F8F8">付款日期</td>
+                <td width="24%" style="background:#F8F8F8">付款金額</td>
+                <td width="14%" style="background:#F8F8F8">支付狀態</td>
+                <td width="11%" style="background:#F8F8F8">支付方式</td>
+                <td width="10%" style="background:#F8F8F8">删除</td>
+              </tr>
+              <!--
+EOT;
+foreach($listdb AS $rs){print <<<EOT
+-->
+              <tr align="center"  class="trA" onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+                <td width="20%">$rs[numcode]</td>
+                <td width="21%">$rs[posttime]</td>
+                <td width="24%">$rs[money] 元</td>
+                <td width="14%">$rs[ifpay]</td>
+                <td width="11%">$rs[banktype]</td>
+                <td width="10%"><a href="?job=$job&action=del_record&id=$rs[id]"><img alt='點擊删除' src='./images/del_icon2.gif' border=0></a></td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+-->
+              <tr align="center"> 
+                <td colspan="6">$showpage</td>
+              </tr>
+            </table>
+
+
+</div>  
+</div>
+    </div>
+
+</div>
+
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+<style>
+.btn_orange{
+  border:none;
+  text-align:center;
+  font-size:20px;
+  color:#FFFFFF;
+  font-weight:bold;
+  line-height:35px;
+  background-color:#ff8400;
+  box-shadow:0px 8px 15px -5px #fed9b0 inset;
+  box-shadow:0px 0px 7px 0px #ff8400;
+  behavior:url("../js/PIE.htc");
+  position:relative;
+  cursor:pointer;
+}
+</style>
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">{$webdb[MoneyName]}充值</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>{$webdb[MoneyName]}充值</li>
+  </ul>
+<div style="float:right; width:710px">
+
+            <table width="710" border="0" cellspacing="1" cellpadding="6">
+              <tr align="left"> 
+                <td height="22" colspan="4"><br>
+                  1.{$webdb[MoneyName]}不足,網站很多功能受限制,那怎么办呢?可以通过以下方式購買<br>
+                  <br>
+                  2.妳當前拥有{$webdb[MoneyName]}数为<img src="images/moneycard.gif"><b><font color="#FF0000"> 
+                  {$lfjdb[money]}</font></b>{$webdb[MoneyDW]},每一块钱人民币可换取<b><font color="#0000FF">{$webdb[alipay_scale]}</font></b>{$webdb[MoneyDW]}{$webdb[MoneyName]},妳可以选择以下方式在線即時購買{$webdb[MoneyName]}</td>
+              </tr>
+              <tr align="center"> 
+                <td height="10" width="25%"><img src="../images/default/yeepay_logo.gif" width="96" height="37"> 
+                  <input type="radio" name="paytype" value="yeepay" checked style="border:0px;" id="pay_yee">                </td>
+                <td height="10" width="25%"><img src="../images/default/tenpay_logo.gif" width="96" height="37"> 
+                  <input type="radio" name="paytype" value="ten" style="border:0px;" id="pay_ten">                </td>
+                <td height="10" width="25%"><img src="../images/default/alipay_logo.gif" width="96" height="37"> 
+                  <input type="radio" name="paytype" value="ali" style="border:0px;" id="pay_ali">                </td>
+              </tr>
+              <tr align="center"> 
+                <td height="74" colspan="4"><a href="money.php?job=record"><img src="images/button_czrecord.gif" border="0"></a> 
+                  　　<a href="javascript:paytype();"><img src="images/button_cz.gif" border="0"></a> 
+                  <SCRIPT LANGUAGE="JavaScript">
+<!--
+function paytype(){
+	var url='';
+	if(document.getElementById("pay_ten").checked==true){
+		url='tenpay';
+	}
+	else if(document.getElementById("pay_ali").checked==true){
+		url='alipay';
+	}
+	
+	else if(document.getElementById("pay_yee").checked==true){
+		url='yeepay';
+	}
+	else {
+		window.open("../do/moneycard.php");
+		return ;
+	}
+	window.open("../do/buymoneycard.php?paytype="+url);
+}
+//-->
+</SCRIPT>                </td>
+              </tr>
+            </table>
+
+
+
+</div>  
+</div>
+    </div>
+
+</div>
+<!--
+EOT;
+}
+?>
+-->

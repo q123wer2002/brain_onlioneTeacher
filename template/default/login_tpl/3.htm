@@ -1,0 +1,158 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<!--
+EOT;
+if($lfjid){
+print <<<EOT
+-->
+<div class="sideblock">
+    <img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_title.jpg" width="240" height="36"><br>
+    <ul class="mymenu clearfix">
+<!--
+EOT;
+if($lfjdb[groupid]=='12'){print <<<EOT
+-->
+        <li><a href="$webdb[www_url]/th.php?job=edit"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn_t_1.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/course.php"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn_t_2.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/course_u.php"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn_t_3.jpg" width="206" height="43"></a></li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+        <li><a href="$webdb[www_url]/member/"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn1.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/list.php?fid=1"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn2.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/f/member/collection.php"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn3.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/member/userinfo.php?job=edit"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn5.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/contact.htm"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn6.jpg" width="206" height="43"></a></li>
+        <li><a href="$webdb[www_url]/member/buygroup.php?job=list"><img src="$webdb[www_url]/upload_files/other/ot/side_mymenu_btn8.jpg" width="206" height="43"></a></li>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+    </ul>
+</div>
+<!--
+EOT;
+}
+print <<<EOT
+--> 
+
+<div class="sideblock"><a href="$webdb[www_url]/voice.htm"><img src="$webdb[www_url]/upload_files/other/ot/voice_bnr.jpg" alt="迅速英文我"></a></div>
+    <div class="sideblock" style="text-align:center;margin-top:1em;"><a href="#blog"><img src="$webdb[www_url]/upload_files/other/ot/blo_banner.jpg" alt="ぐんぐんスタッフブログ"><br>スタッフブログはじめました</a></div>
+<div id="right_side" class="sideblock">
+<img src="$webdb[www_url]/upload_files/other/ot/side_title1.jpg" alt="講師PICK UP!" width="240" height="36"><br>
+<div class="bggreen clearfix">
+<div><img src="$webdb[www_url]/upload_files/other/ot/side_title1_1.jpg" alt="最愛歡迎的講師" width="224" height="24"></div>
+<ul class="teacher clearfix">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content WHERE yz=1 order by hits desc LIMIT 6");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]"><img src="$webdb[www_url]/upload_files/$rss[picurl]" alt="$rss[title]" width="70"> </a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</ul>
+
+<div><img src="$webdb[www_url]/upload_files/other/ot/side_title1_2.jpg" alt="推薦的講師" width="224" height="24"></div>
+<ul class="teacher clearfix">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content WHERE yz=1 order by levels asc LIMIT 6");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]"><img src="$webdb[www_url]/upload_files/$rss[picurl]" alt="$rss[title]" width="70"> </a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</ul>
+
+<div><img src="$webdb[www_url]/upload_files/other/ot/side_title1_3.jpg" alt="留言最多的講師" width="224" height="24"></div>
+<ul class="teacher clearfix">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content WHERE yz=1 order by comments desc LIMIT 6");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]"><img src="$webdb[www_url]/upload_files/$rss[picurl]" alt="$rss[title]" width="70"> </a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</ul>
+
+
+
+
+<div><img src="$webdb[www_url]/upload_files/other/ot/side_title1_4.jpg" alt="最新加盟的講師" width="224" height="24"></div>
+<ul class="teacher clearfix">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content WHERE yz=1 order by id desc LIMIT 6");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]"><img src="$webdb[www_url]/upload_files/$rss[picurl]" alt="$rss[title]" width="70"> </a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</ul>
+
+<a href="$webdb[www_url]/list.php?fid=1"><img src="$webdb[www_url]/upload_files/other/ot/side_btn1.jpg" alt="更多.." width="219" height="42"></a>
+
+</div>
+</div>
+
+<div class="sideblock">
+<img src="$webdb[www_url]/upload_files/other/ot/side_title2.jpg" alt="最近的評價" width="240" height="36"><br>
+<div class="comment bgblue clearfix">
+<!--
+EOT;
+$query = $db->query("SELECT B.*,A.* FROM `{$pre}fenlei_comments` A LEFT JOIN `{$pre}fenlei_content` B ON A.id=B.id WHERE A.yz='1' order by A.type desc LIMIT 10");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<p><img src="$webdb[www_url]/upload_files/other/ot/side_comment_t.jpg" width="220" height="10" alt=""></p>
+<p class="comment_inner">$rss[content]</p>
+<p><img src="$webdb[www_url]/upload_files/other/ot/side_comment_b.jpg" width="220" height="10" alt=""></p>
+<p class="comment_teacher"><img src="$webdb[www_url]/upload_files/other/ot/side_comment_icon_g.jpg" width="14" height="13" alt=""> <a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]">$rss[title]</a>的評價</p>
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+
+
+
+
+</div>
+</div>
+
+<div class="sideblock">
+<img src="$webdb[www_url]/upload_files/other/ot/side_title3.jpg" alt="聯繫我們" width="240" height="36"><br>
+<div class="contact bgorange clearfix">
+<p>如果你有任何問題，請隨時迅速接觸英語。</p>
+<p>點擊聯系<a href="skype:$webdb[webskype]?call"><img src="$webdb[www_url]/images/img/skype_online.png" style="border: none;" width="114" height="20" alt="登錄狀態"></a></p>
+<p>Skype名：<span class="ff69aa_b24">$webdb[webskype]</span><br>客服名稱：$webdb[webskypen]</p>
+<p class="number"><span class="ff69aa_b24">$webdb[webtel]</span></p>
+<p class="arrow"><a href="$webdb[www_url]/contact.htm">電子郵件聯繫我們</a></p>
+</div>
+</div>
+<!--
+EOT;
+?>
+-->

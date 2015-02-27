@@ -1,0 +1,530 @@
+<!--
+<?php
+$_max_upload=$max_upload*1024;
+print <<<EOT
+--> 
+ 
+<table width='100%' cellspacing='1' cellpadding='3' class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=$job">
+    <tr class="head"> 
+      <td colspan='2'> 
+        <div align='center'><b><font color='#FFFFFF'>網站核心设置</font></b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">網站名称:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[webname]' size='50' value='$webdb[webname]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">網站热點关键词:<span help="1">(填寫与妳網站相关的热门词语,每個用空格隔开,主要是方便搜索引擎收录妳的網站.此项内容可以留空)</span></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[metakeywords]' size='50' value='$webdb[metakeywords]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">網站描述:<span help="1">(填寫与妳網站相关的热门词语,每個用空格隔开,主要是方便搜索引擎收录妳的網站.此项内容可以留空)</span></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[description]' size='50' value='$webdb[description]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">琯理员郵箱:<span help="1">不是太重要,可留空</span></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[webmail]' size='50' value='$webdb[webmail]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">skype:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[webskype]' size='50' value='$webdb[webskype]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">显示名称:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[webskypen]' size='50' value='$webdb[webskypen]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">电话:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[webtel]' size='50' value='$webdb[webtel]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">每天堂課数:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' name='webdbs[kvips]' size='50' value='$webdb[kvips]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">網站使用的积分类型:<span help="1">如果妳没有整合论坛,那只能是选择整站积分,如果整合了论坛,妳可以选择论坛积分或者是整站积分,推荐是选择论坛积分,这样可以跟论坛的积分同步,一旦选择後,就不要轻易的改更,否则容易造成混乱!选择论坛积分後,整站的积分将会停用,无效.</span></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input type="radio" name="webdbs[UseMoneyType]" value="cms" $UseMoneyType[cms]>
+        網站积分 
+        <!--
+EOT;
+if( eregi("^pwbbs",$webdb[passport_type])||eregi("^dzbbs",$webdb[passport_type]) ){print <<<EOT
+-->
+        <input type="radio" name="webdbs[UseMoneyType]" value="bbs" $UseMoneyType[bbs]>
+        论坛积分 
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='16%' bgcolor='#FFFFFF'></td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input type="text" name="webdbs[BuySpacesizeMoney]" size="5" value="$webdb[BuySpacesizeMoney]">
+        點,默认100點</td>
+    </tr>
+    <!--
+EOT;
+if( eregi("^pwbbs",$webdb[passport_type])||eregi("^dzbbs",$webdb[passport_type]) ){print <<<EOT
+-->
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'>论坛用户登錄整站,激活帐號後是否自动通过审核:</td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input type="radio" name="webdbs[BbsUserAutoPass]" value="1" $BbsUserAutoPass[1]>
+        自动通过审核 
+        <input type="radio" name="webdbs[BbsUserAutoPass]" value="0" $BbsUserAutoPass[0]>
+        琯理员手工审核</td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'>是否开通郵箱自动审核帐號功能:<span help="1"> 當设置注册不自动通过审核的時候或者论坛用户激活帐號後但处于未审核狀态時,妳可以在这里设置开通郵箱自动审核帐號功能.否则只能琯理员手工审核帐號. 
+        </span></td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input type="radio" name="webdbs[UserEmailAutoPass]" value="1" $UserEmailAutoPass[1]>
+        开通 
+        <input type="radio" name="webdbs[UserEmailAutoPass]" value="0" $UserEmailAutoPass[0]>
+        不开通</td>
+    </tr>
+    <tr> 
+      <td width='29%' bgcolor='#FFFFFF'>积分名称：<span help="1">如果上面选择了论坛积分的话,最好跟论坛的保持一致,而让会员不易觉得混乱.</span></td>
+      <td   bgcolor='#FFFFFF' width="71%"> 
+        <input type="text" name="webdbs[MoneyName]" value="$webdb[MoneyName]">
+        <font color="#999999">(如：积分、整站币、论坛币、论坛积分) </font></td>
+    </tr>
+    <tr> 
+      <td width='29%' bgcolor='#FFFFFF'>积分單位：<span help="1">如果上面选择了论坛积分的话,最好跟论坛的保持一致,而让会员不易觉得混乱.</span></td>
+      <td   bgcolor='#FFFFFF' width="71%"> 
+        <input type="text" name="webdbs[MoneyDW]" size="5" value="$webdb[MoneyDW]">
+        <font color="#666666">(如：點、個、只)</font></td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width='16%'> 
+        <div align="left">網站打开还是关闭:<span help="1">如果选择关闭的话,前台将禁止所有人访问,但琯理员还是可以访问後台的</span></div>
+      </td>
+      <td width="84%"> 
+        <input type="radio" name="webdbs[web_open]" value="1" $web_open1>
+        开放 
+        <input type="radio" name="webdbs[web_open]" value="0" $web_open0>
+        关闭</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width='16%'> 
+        <div align="left">关闭原因:</div>
+      </td>
+      <td width="84%"> 
+        <textarea cols='50' name='webdbs[close_why]' rows='8'>$webdb[close_why]</textarea>
+      </td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left"></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%">{$select_style} <font color="#666666">如果栏目设置了风格,将以栏目的为標准</font></td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left"></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%">{$select_member_style} </td>
+    </tr>
+ 
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF' rowspan="2">系统访问網阯:</td>
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp"> 
+        <input type="text" name="webdbs[www_url]" value="$webdb[www_url]" size="50">
+        (非常重要,請正确填寫) </td>
+    </tr>
+    <tr> 
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp">比如http://www.qibosoft.com 
+        结尾不要留有<b><font color="#FF0000">/</font></b> <b><font color="#FF0000"><br>
+        </font></b>請必须正确填寫,否则会造成图片不能显示及链接路径有错<br>
+        提示:系统检测到妳的地阯是<font color="#0000FF"><b>{$truepath}</b></font>,如果妳认为没错的话,請在上面表單输入<font color="#0000FF"><b>{$truepath}</b></font><br>
+        重要提示:如果妳的是單位網站,需要内網IP与外網域名同時能访问的话(網站必须要装在根目录,并且不能设置COOKIE域名),請输入<font color="#FF0000"><b>/.</b></font></td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'>後台访问網阯:<span help=1>如果妳的後台目录名被修改过,不是admin的话,这里要对应的作以修改,否则不能设置標签!</span></td>
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp"> 
+        <input type="text" name="webdbs[admin_url]" value="$webdb[admin_url]" size="50">
+        (不能留空,如果妳把後台目录admin改名後.这里也要跟着修改,否则標签不能设置) </td>
+    </tr>
+     
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF' rowspan="2"> 
+        <div align="left">時間误差:<span help=1>一般留空,因为一般情况,服务器時間是正常的</span></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp"> 
+        <input    type='text' size='10' value='$webdb[time]' name='webdbs[time]'>
+        單位(分钟)</td>
+    </tr>
+    <tr> 
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp">如果服务器時間太慢寫正数，如果時間太快寫负数，單位为(分钟)</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+      </td>
+      <td bgcolor='#FFFFFF' class="tdhelp"> 
+        <input    type='text' size='10' value='$webdb[totalSpace]' name='webdbs[totalSpace]'>
+        M (留空或为0则不能上传文件)</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width='16%' rowspan="2"> 
+        <div align="left">会员上传單個文件不能超过多大:</div>
+      </td>
+      <td width="84%" class="tdhelp"> 
+        <input    type='text' size='10' value='$webdb[upfileMaxSize]' name='webdbs[upfileMaxSize]'>
+        K (留空或为0则不做限制)</td>
+    </tr>
+    <tr> 
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp">注意:妳的服务器最大仅允许<b><font color="#FF0000">$max_upload</font></b>,上面表單数值不能超过{$_max_upload}(K),超过不生效</td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF' rowspan="2"> 
+        <div align="left">允许会员上传文件的类型</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp"> 
+        <input    type='text' size='50' value='$webdb[upfileType]' name='webdbs[upfileType]'>
+        (每個用英文空格隔开,表單留空则不能上传文件)</td>
+    </tr>
+    <tr> 
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp">推荐是<font color="#0000FF">.rar 
+        .txt .jpg .gif .zip .mp3 .wma .mpeg .mpg .rm .ram .htm .doc .swf .avi 
+        .flv .sql</font></td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">附件目录:<span help=1>一般情况建议不要修改,如果要修改的话,請手工同時把整站目录下的目录/{$webdb[updir]}/同時一起修改</span></div>
+      </td>
+      <td bgcolor='#FFFFFF'> 
+        <input    type='text' value='$webdb[updir]' name='webdbs[updir]' size='40'>
+        <font color="#FF0000">(建议不要修改)</font> <font color="#FF0000"> </font></td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF' rowspan="2"> 
+        <div align="left">远程附件目录:<span help=1>一般留空,如果设置後,當本地找不到相应的附件,就会调用远程的文件</span></div>
+      </td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='text' size='40' value='$webdb[mirror]' name='webdbs[mirror]'>
+      </td>
+    </tr>
+    <tr> 
+      <td bgcolor='#FFFFFF' width="84%" class="tdhelp">如果有附件放在其他空間,請把附件目录網阯寫进來,否则請留空</td>
+    </tr>
+    <tr> 
+      <td bgcolor='#FFFFFF' width="16%"> 
+        <div align="left">是否显示系统错误报告:<span help=1>網站正常运行情况下,請选择关闭系统错误报告,只有當網站运行不正常時,才把“打开系统详细错误报告<font color="#0000FF"></font>”选中,然後把错误信息髮表到www.qibosoft.com以方便追踪错误信息.官方论坛会帮妳分析,并给出修正方法。網站运行正常時，如果打开错误报告的话，一些不影响正常运行的微小错误信息会在页面的顶部显示，影响美观。</span></div>
+      </td>
+      <td bgcolor='#FFFFFF'> 
+        <p> 
+          <input type="radio" name="webdbs[forbid_show_bug]" value="1" $forbid_show_bug1>
+          关闭系统错误报告 <b> 
+          <input type="radio" name="webdbs[forbid_show_bug]" value="0" $forbid_show_bug0>
+          </b>打开系统详细错误报告<font color="#0000FF">(網站运行正常,請选择“关闭系统错误报告”)</font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'> 
+        <div align="left">COOKIE有效域名:<span help=1>要么留空，要么输入妳访问網站的国际域名，如<font color="#FF0000">qibosoft.com</font>,前面不能加<b><font color="#0000FF">www.</font></b>如果妳使用IP访问整站的话，必须要留空，或者是输入IP进去。如果妳的網站更换了国际域名。这里必须跟着修改，否则前台会员将不能登錄。如果整合论坛後，髮现跟论坛不能同步登錄的话，妳必须在这里设置国际域名，如qibosoft.com，论坛也同样的要设置国际域名。DISCUZ论坛的设置方法是：修改文件/bbs/config.inc.php查找cookiedomain把他右边的值设置为妳的国际域名.PHPWIND论坛的设置方法是：登錄後台，在核心设置那里查找“COOKIE有效域名”然後填入妳的国际域名即可，而“COOKIE有效目录”那一项，只能是输入斜杠/<br>
+          <font color="#FF0000">注意：</font>http://qibosoft.com与http://www.qibosoft.com属于不同的COOKIE作用域名，如果妳右边留空的话，在这個網阯http://qibosoft.com登錄的话，再用http://www.qibosoft.com这個網阯访问，是显示没登錄的。所以此時也必须要设置COOKIE的国际域名。當然http://www.qibosoft.com与http://***.qibosoft.com这类的二级域名也是属于不同的COOKIE作用域，此時也必须要在右边设置qibosoft.com作为国际域名。而不能留空了。<br>
+          </span> </div>
+      </td>
+      <td bgcolor='#FFFFFF'> 
+        <input type='text' value='$webdb[cookieDomain]' name='webdbs[cookieDomain]' size='30'>
+        (如果会员登錄不正常，請點擊左边图標，查看帮助) </td>
+    </tr>
+     <tr>
+      <td width='28%' bgcolor='#FFFFFF'  > COOKIE前缀: </td>
+      <td bgcolor='#FFFFFF'> 
+        <input type="text" size="10" name="webdbs[cookiePre]" value="$webdb[cookiePre]">
+        一般留空,當妳安装多個齐博软件時,才设置,只能是纯字母或字母+数字</td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'  > 
+        <div align="left">網站备案號:<span help=1>如果妳还没备案或忘記备案號,<a href="http://www.miibeian.gov.cn" target="_blank">請點擊这里</a></span></div>
+      </td>
+      <td bgcolor='#FFFFFF'> 
+        <input type="text" size="30" name="webdbs[miibeian_gov_cn]" value="$webdb[miibeian_gov_cn]">
+      </td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>網页底部版权信息:</td>
+      <td bgcolor='#FFFFFF'> 
+        <textarea cols='60' name='webdbs[copyright]' rows='5'>$webdb[copyright]</textarea>
+      </td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>密钥(加密混淆字符串,請随意输入任意字符串即可):</td>
+      <td bgcolor='#FFFFFF'> 
+        <input type="text" size="60" name="webdbs[mymd5]" value="$webdb[mymd5]">
+      </td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='28%' bgcolor='#FFFFFF'></td>
+      <td bgcolor='#FFFFFF'> 
+        <textarea cols='60' name='webdbs[companyTrade]' rows='5'>$webdb[companyTrade]</textarea>
+      </td>
+    </tr>
+	
+	
+
+	
+	
+    <tr style="display:none"> 
+      <td width='28%' bgcolor='#FFFFFF'></td>
+      <td bgcolor='#FFFFFF'> 
+        <textarea cols='60' name='webdbs[memberNotice]' rows='5'>$webdb[memberNotice]</textarea>
+      </td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>会员上传头像是否自动裁剪:<span help=1>一般用户上传的头像尺寸都比较大,建议选择自动裁剪</span></td>
+      <td bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[AutoCutFace]" value="1" $AutoCutFace[1]>
+        自动裁剪 
+        <input type="radio" name="webdbs[AutoCutFace]" value="0" $AutoCutFace[0]>
+        不裁剪</td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>琯理员後台登錄是否使用验证碼:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[yzImgAdminLogin]" value="1" $yzImgAdminLogin[1]>
+        使用 
+        <input type="radio" name="webdbs[yzImgAdminLogin]" value="0" $yzImgAdminLogin[0]>
+        不使用</td>
+    </tr>
+    
+    <tr style="display:none"> 
+      <td width='28%' bgcolor='#FFFFFF'></td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[DownLoad_readfile]" value="0" $DownLoad_readfile[0]>
+        不隐藏 
+        <input type="radio" name="webdbs[DownLoad_readfile]" value="1" $DownLoad_readfile[1]>
+        隐藏 (推荐隐藏,但如果隐藏导致无法正常下载,就取消隐藏,因为有少数服务器不支持隐藏)</td>
+    </tr>
+    
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>標签缓存時間:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="text" name="webdbs[label_cache_time]" size="5" value="$webdb[label_cache_time]">
+        分钟 (留空或为0则默认为3分钟,建议10分钟以上.要取消,請填“-1”,数据量大時,强烈推荐不要取消.) </td>
+    </tr>
+ 
+
+
+<tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'> 
+        <div align="left"></div>
+      </td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_allowGuesSearch]" value="1" $Info_allowGuesSearch[1]>
+        允许 
+        <input type="radio" name="webdbs[Info_allowGuesSearch]" value="0" $Info_allowGuesSearch[0]>
+        禁止</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'><br>
+        (只有通过审核的,才有奖励) </td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[PostInfoMoney]" size="7" value="$webdb[PostInfoMoney]">
+        $webdb[MoneyDW]</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'><br>
+        留空则为50条</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[CollectArticleNum]" size="4" value="$webdb[CollectArticleNum]">
+        条</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'>是否强制设置信息有效日期:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_UseEndTime]" value="1" $Info_UseEndTime[1]>
+        强制设置有效日期 
+        <input type="radio" name="webdbs[Info_UseEndTime]" value="0" $Info_UseEndTime[0]>
+        可不选择有效日期 </td>
+    </tr>
+    <tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'>是否自动删除过期信息:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_DelEndtime]" value="1" $Info_DelEndtime[1]>
+        自动删除(推荐) 
+        <input type="radio" name="webdbs[Info_DelEndtime]" value="0" $Info_DelEndtime[0]>
+        不删除</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'>是否显示所有信息:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_ShowNoYz]" value="1" $Info_ShowNoYz[1]>
+        显示所有信息 
+        <input type="radio" name="webdbs[Info_ShowNoYz]" value="0" $Info_ShowNoYz[0]>
+        只显示已审核信息</td>
+    </tr>
+    <!--
+EOT;
+if( count($city_DB[name])>1 ){print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'>用户首次访问,选择城市方式:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_MemberChooseCity]" value="1" $Info_MemberChooseCity[1]>
+        用户手动选择城市 
+        <input type="radio" name="webdbs[Info_MemberChooseCity]" value="0" $Info_MemberChooseCity[0]>
+        系统自动跳转到对应的城市
+        <input type="radio" name="webdbs[Info_MemberChooseCity]" value="2" $Info_MemberChooseCity[2]>
+        默认第一個城市 </td>
+    </tr>
+    <tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'>选择城市,展示方式:(某些风格不受控制)</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_allcityType]" value="1" $Info_allcityType[1]>
+        按字母排列 
+        <input type="radio" name="webdbs[Info_allcityType]" value="0" $Info_allcityType[0]>
+        按省份排列</td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>髮布信息,有效天数:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[Info_showday]" size="50" value="$webdb[Info_showday]">
+        每個参数用斜線/隔开,如:90/60/30</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>刷新信息的時間間隔:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[UpdatePostTime]" size="4" value="$webdb[UpdatePostTime]">
+        小時(留空,则默认为1小時)</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>联系方式:(仅供某些风格使用)</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <textarea name="webdbs[Info_contact]" cols="50" rows="6">$webdb[Info_contact]</textarea>
+      </td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>举报信息的性质类型</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <textarea name="webdbs[Info_ReportDB]" cols="50" rows="6">$webdb[Info_ReportDB]</textarea>
+        每個换一行</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>伪静态的形式:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="radio" name="webdbs[Info_htmlType]" value="0" $Info_htmlType[0]>
+        动态 
+        <input type="radio" name="webdbs[Info_htmlType]" value="1" $Info_htmlType[1]>
+        普通伪静态 
+        <!--
+EOT;
+if( count($city_DB[name])>1 ){print <<<EOT
+-->
+        <input type="radio" name="webdbs[Info_htmlType]" value="2" $Info_htmlType[2]>
+        高级伪静态(类似58同城与赶集網那样的形式) 
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>伪静态文件名:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[Info_htmlname]" size="8" value="$webdb[Info_htmlname]">
+        一般是“html”,“htm”,默认是“html”</td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>首页缓存時間:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[Info_index_cache]" value="$webdb[Info_index_cache]" size="5">
+        分钟,不想使用缓存的话,寫0,数据大的時候,推荐60分钟以上</td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>列表页缓存時間:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[Info_list_cache]" value="$webdb[Info_list_cache]" size="5">
+        分钟,不想使用缓存的话,寫0,数据大的時候,推荐600分钟以上</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>允许上传本地组图的用户组:(琯理员默认有权限,游客强制没权限,不选择则都有权限)</td>
+      <td bgcolor='#FFFFFF' width="74%">$group_UpPhoto</td>
+    </tr>
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>髮布信息允许上传本地图片的用户组:(琯理员默认有权限,不选择则都有权限)</td>
+      <td bgcolor='#FFFFFF' width="74%">$Post_group_UpPhoto</td>
+    </tr>
+     
+    <tr style="display:none"> 
+      <td width='26%' bgcolor='#FFFFFF'>防信息群髮机<br>
+        随机字符串生成時間間隔:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[rand_num_mktime]" size="8" value="$webdb[rand_num_mktime]">
+        小時 （留空或为0時，将不启用。原理是：每隔一段時間生成一個随机字符串，髮布信息時，表單页将得到随机生成的字符串，而注册机将无法同步获取对应的字符串）</td>
+    </tr>
+	
+ <tr bgcolor="#FFFFFF" style="display:none"> 
+      <td width='26%'>使用的地图类型:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[if_GGmap]" value="1" $if_GGmap[1]>
+        谷歌地图(需要申請API才能使用) 
+        <input type="radio" name="webdbs[if_GGmap]" value="0" $if_GGmap[0]>
+        51地图(可以直接使用)</td>
+    </tr>
+	<tr style="display:none"> 
+      <td width='22%' bgcolor='#FFFFFF'> 谷歌地图 API 密钥</td>
+      <td bgcolor='#FFFFFF' width="78%"> 
+        <input    type='text' name='webdbs[gg_map_api]' size='50' value='$webdb[gg_map_api]'>
+        <a href="http://code.google.com/intl/zh-CN/apis/maps/signup.html" target="_blank">申請一個</a> 
+      </td>
+    </tr>
+    <tr> 
+      <td width='16%' bgcolor='#FFFFFF'>&nbsp;</td>
+      <td bgcolor='#FFFFFF' width="84%"> 
+        <input    type='submit' name='w' value='保存设置'>
+      </td>
+    </tr>
+  </form>
+</table>
+<!--
+EOT;
+?>
+-->

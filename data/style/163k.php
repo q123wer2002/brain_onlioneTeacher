@@ -1,0 +1,3 @@
+<?php	
+		$styledb['name']='•rÉÐ·ç¸ñ';
+		$styledb['keywords']='163k';

@@ -1,0 +1,86 @@
+<!--
+<?php
+print <<<EOT
+--> 
+
+
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth"  style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+  <form name="form_work" method="post" action="index.php?lfj=$lfj&action=config">
+    <tr class="head"> 
+      <td colspan="2" align="center">郵箱资料配置</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="left" width="21%">郵件髮送模式:</td>
+      <td align="left" width="79%"> <a href="index.php?lfj=$lfj&action=delete_admin_logs&iddb[{$rs[id]}]=1"></a> 
+        <input type="radio" onclick="mail_type('mail')" name="webdbs[MailType]" value="mail" $MailType[mail]>
+        mail 函数髮送 
+        <input type="radio" onclick="mail_type('smtp')"  name="webdbs[MailType]" value="smtp" $MailType[smtp]>
+        SMTP 模块髮送(常用)</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" id="tr1"> 
+      <td align="left" width="21%">SMTP 服务器: </td>
+      <td align="left" width="79%"> 
+        <input type="text" name="webdbs[MailServer]" value="$webdb[MailServer]">
+        如:smtp.qq.com smtp.163.com</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" id="tr2"> 
+      <td align="left" width="21%">SMTP 端口,一般是25</td>
+      <td align="left" width="79%"> 
+        <input type="text" name="webdbs[MailPort]" size="4" value="$webdb[MailPort]">
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF" id="tr3"> 
+      <td align="left" width="21%">郵箱帐號:</td>
+      <td align="left" width="79%"> 
+        <input type="text" name="webdbs[MailId]" value="$webdb[MailId]">
+        如:test@qq.com</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" id="tr4"> 
+      <td align="left" width="21%">郵箱密碼:</td>
+      <td align="left" width="79%"> 
+        <input type="password" name="webdbs[MailPw]" value="$webdb[MailPw]">
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="left" width="21%">&nbsp;</td>
+      <td align="left" width="79%"> 
+        <input type="submit" name="Submit" value="提交">
+      </td>
+    </tr>
+  </form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function mail_type(t){
+	if(t=='mail'){
+		$("#tr1").hide();
+		$("#tr2").hide();
+		$("#tr3").hide();
+		$("#tr4").hide();
+	}else if(t=='smtp'){
+		$("#tr1").show();
+		$("#tr2").show();
+		$("#tr3").show();
+		$("#tr4").show();
+	}
+}
+mail_type('$webdb[MailType]');
+//-->
+</SCRIPT>
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth"  style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+   
+    <tr class="head"> 
+      <td align="left">说明</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      
+    <td align="left">1、一般情况下都是选择“SMTP 模块髮送”,而“mail 函数髮送”只有极少部分服务器才支持.<br>
+     </td>
+    </tr>
+   
+</table>
+<!--
+EOT;
+?>
+-->

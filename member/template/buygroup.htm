@@ -1,0 +1,140 @@
+<!--
+<?php
+$width=floor(80/count($listdb)).'%';
+print <<<EOT
+--> 
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+<style>
+.btn_orange{
+  border:none;
+  text-align:center;
+  font-size:20px;
+  color:#FFFFFF;
+  font-weight:bold;
+  line-height:35px;
+  background-color:#ff8400;
+  box-shadow:0px 8px 15px -5px #fed9b0 inset;
+  box-shadow:0px 0px 7px 0px #ff8400;
+  behavior:url("../js/PIE.htc");
+  position:relative;
+  cursor:pointer;
+}
+</style>
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">會員升級</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>會員升級</li>
+  </ul>
+<div style="float:right; width:710px">
+使用{$webdb[MoneyName]}購買級別,從購買之日起，有效期为<b><font color="#FF0000">{$webdb[groupTime]}</font></b>天,妳现在的級別是“<b><font color="#0000FF">{$ltitle[$lfjdb[groupid]]}</font></b>” 
+            {$lfjdb[C][endtime]}
+
+<!--
+EOT;
+if($job=='buy'){print <<<EOT
+-->
+                    
+                  <table width="710" border="0" cellspacing="1" cellpadding="6">
+                    <form name="form2" method="post" action="?action=buy">
+                      <tr> 
+                        <td style="border-bottom:1px solid #ccc;background:#F6F6F6;height:25px;">妳目前的{$webdb[MoneyName]}有 
+                          <img src="images/money.gif"> <b><font color="#0000FF">{$lfjdb[money]}</font></b>{$webdb[MoneyDW]}</td>
+                      </tr>
+                      <tr> 
+                        <td align="center" style="height:40px;"> 妳现在的級別是“<b><font color="#0000FF">{$ltitle[$lfjdb[groupid]]}</font></b>”，{$lfjdb[C][endtime]}妳要購買的級別是“{$rsdb[grouptitle]}”,需要{$webdb[MoneyName]}“{$rsdb[levelnum]}”{$webdb[MoneyDW]}<br>
+                    
+                          <input type="button" name="Submit32" value="點擊返迴" onclick="history.back(-1)">      <input type="submit" name="Submit3" value="立即購買">
+                          <input type="hidden" name="action" value="buy">
+                          <input type="hidden" name="gid" value="$gid">
+						  
+<!--
+EOT;
+if($lfjdb[money]<$rsdb[levelnum]){print <<<EOT
+-->			  
+                          <br>
+                          <b><font color="#FF0000"><img src="$webdb[www_url]/images/default/notice.jpg"> 
+                          注意: </font></b>妳目前的{$webdb[MoneyName]}仅有{$lfjdb[money]}{$webdb[MoneyDW]},不足{$rsdb[levelnum]}{$webdb[MoneyDW]},无法購買當前这個級別:{$rsdb[grouptitle]},請先<a href="money.php?job=list"><font color="#0000FF">充值</font></a> 
+                          <!--
+EOT;
+}print <<<EOT
+-->
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                      </tr>
+                    </form>
+                  </table>
+				  <!--
+EOT;
+}else{print <<<EOT
+-->
+                  <table  border="0" cellspacing="1" cellpadding="6"  width="100%" bgcolor="#EBEBEB" id="table1" style="margin-top:15px">
+                    <tr align="center"> 
+                      <td width="20%" align="center" style="background:#F6F6F6;line-height:21px;text-align:center">會員計劃 </td>
+                      <td width="20%" align="center" style="background:#F6F6F6;line-height:21px;text-align:center">預約次數</td>
+                      <td width="20%" align="center" style="background:#F6F6F6;line-height:21px;text-align:center">{$webdb[MoneyName]}</td>
+                      <td style="background:#F6F6F6;line-height:21px;text-align:center" align="center">報名</td>
+                    </tr>
+                    
+<!--
+EOT;
+
+foreach($listdb AS $key=>$rs){print <<<EOT
+-->                    
+<!--
+EOT;
+if($rs[levelnum]){print <<<EOT
+-->                    <tr align="center" bgcolor="#FFFFFF"> 
+                      <td style="height:50px;" align="center" style="text-align:center">$rs[grouptitle]</td>
+                      <td style="height:50px;" align="center" style="text-align:center">　</td>
+                      <td style="height:50px;" align="center" style="text-align:center">{$rs[levelnum]} {$webdb[MoneyDW]}</td>
+                      <td style="height:50px;" align="center" style="text-align:center"><a href="?job=buy&gid=$rs[gid]#buy"><img src="images/buybutton2.gif" border="0" alt="購買"></a></td>
+                    </tr>
+                    
+<!--
+EOT;
+}print <<<EOT
+-->
+<!--
+EOT;
+}print <<<EOT
+-->
+                    
+ </table>
+                 
+                  <!--
+EOT;
+}print <<<EOT
+-->
+
+
+					
+<div style="line-height:30px; padding-left:10px">
+1.購買用户級別,需要{$webdb[MoneyName]}購買,妳當前拥有的{$webdb[MoneyName]}数是 
+                  <b><font color="#FF0000">{$lfjdb[money]}</font></b> 個 <br>
+                  2.如果妳的{$webdb[MoneyName]}不足,妳可以先在線充值.<a href="money.php?job=list"><b><font color="#FF0000">在線充值</font></b></a>
+</div>
+
+
+
+
+
+
+</div>  
+</div>
+    </div>
+
+</div>
+
+<!--
+EOT;
+?>
+-->

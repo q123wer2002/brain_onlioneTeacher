@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+<?php
+if($webdb[SystemType]&&!function_exists('get_info_url')){
+@include(ROOT_PATH."$webdb[SystemType]/global.php");
+}
+if($webdb[SystemType]){
+$webdb[Info_guide_word]=$webdb[guide_word];
+}
+$GuideFid[$fid]=str_replace("<a href='$webdb[www_url]' class='guide_menu'>&gt;首页</a>","",$GuideFid[$fid]);
+print <<<EOT
+-->
+<head>
+<title>$titleDB[title]</title>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/gge/c.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="keywords" content="$titleDB[keywords]">
+<meta name="description" content="$titleDB[description]"> 
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--//导航菜單
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+//-->
+</SCRIPT>
+<!--
+EOT;
+if($webdb[cookieDomain]){print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+//解决不同域名的框架跨域问題
+document.domain = "$webdb[cookieDomain]";
+</SCRIPT>
+<!--
+EOT;
+}print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/inc.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/default.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/swfobject.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/jquery-1.2.6.min.js"></SCRIPT>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="header_inner">
+        <h1>英语在線英语迅速Skype100的圈子</h1>
+        <div id="header_left"><a href="$webdb[www_url]/"><img src="$webdb[www_url]/images/img/header_logo.jpg" alt="迅速英文" width="137" height="88"></a></div>
+        <div id="header_right">
+            <ul>
+                <li><a href="$webdb[www_url]/member"><img src="$webdb[www_url]/images/img/header_gngn.jpg" alt="您快速"><img src="$webdb[www_url]/images/img/header_num.jpg" id="num" alt="num"></a></li>
+                <li id="numarea">
+                    <span class="ff69aa_b">这是從妳迅速地通知您。</span><br>
+                    <img src="$webdb[www_url]/images/img/header_num_top.jpg"><br>
+                    <div id="numarea_inner">
+	                        總課時：<span class="ff69aa_b16"><!--
+EOT;
+$query = $db->query("SELECT COUNT(*) AS Num from js_course");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+$rss[Num]
+<!--
+EOT;
+}
+print <<<EOT
+--></span>迴<br>
+                        在籍講師数：<span class="ff69aa_b16"><!--
+EOT;
+$query = $db->query("SELECT COUNT(*) AS Num from js_fenlei_content");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+$rss[Num]
+<!--
+EOT;
+}
+print <<<EOT
+--></span>人
+                    </div>
+                    <img src="$webdb[www_url]/images/img/header_num_bottom.jpg">
+                </li>
+                <li><a href="$webdb[www_url]/contact.htm"><img src="$webdb[www_url]/images/img/header_contact.jpg"></a><a href="skype:$webdb[webskype]?call"><img src="$webdb[www_url]/images/img/skype_online.png" id="header_skype" width="114" height="20" alt="登錄狀態"></a></li>
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=2"></SCRIPT>    
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="navi">
+    <ul id="navi_inner">
+        <li id="navi1"><a href="$webdb[www_url]/"></a></li>
+        <li id="navi2"><a href="$webdb[www_url]/about.htm"></a></li>
+        <li id="navi3"><a href="$webdb[www_url]/list.php?fid=1"></a></li>
+        <li id="navi4"><a href="$webdb[www_url]/text.htm"></a></li>
+        <li id="navi5"><a href="$webdb[www_url]/fee.htm"></a></li>
+        <li id="navi6"><a href="$webdb[www_url]/flow.htm"></a></li>
+        <li id="navi7"><a href="$webdb[www_url]/skype.htm"></a></li>
+        <li id="navi8"><a href="$webdb[www_url]/faq.htm"></a></li>
+        <li id="navi9"><a href="$webdb[www_url]/voice.htm"></a></li>
+    </ul>
+</div>
+<div id="navibar">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=0"></SCRIPT>    
+        
+</div>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('<div class="wrap">');
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

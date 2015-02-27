@@ -1,0 +1,83 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=course_u&job=list">
+    <tr class="head"> 
+      <td><font color="#FFFFFF">預約搜索</font></td>
+    </tr>
+    <tr> 
+      <td align="center"> 
+	  
+	  預約：<input type="text" name="id" value="$id" size="5">
+	  講師：<input type="text" name="t_name" value="$t_name" size="15">
+	  講師ID：<input type="text" name="t_id" value="$t_id" size="5">
+	  會員：<input type="text" name="u_name" value="$u_name" size="15">
+	  會員ID：<input type="text" name="u_id" value="$u_id" size="5">
+	  日期：<input type="text" name="data" value="$data" size="15">
+	  時段：<input type="text" name="time" value="$time" size="15">
+	  開課：是<input type="radio" value="1" name="off"> 否<input type="radio" value="2" name="off"> 
+	  缺席<input type="radio" value="1" name="yz">
+		
+     <select name="order">
+	<option value="0">默認排序</option>
+	<option value="1">開課時間降序</option>
+	<option value="2">開課時間升序</option>
+	<option value="3">申請時間降序</option>
+	<option value="4">申請時間升序</option>
+	</select>		
+        <input type="submit" name="Submit7" value="提交">
+      </td>
+    </tr>
+  </form>
+</table>
+
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=$job">
+    <tr class="head"> 
+      <td width="10%" align="center">序號</td>
+      <td width="" align="center">講師</td>
+      <td width="10%" align="center">開課日期</td>
+      <td width="10%" align="center">開課時段</td>
+      <td width="10%" align="center">要求</td>
+      <td width="10%" align="center">申請時間</td>
+      <td width="10%" align="center">申請會員</td>
+      <td width="5%" align="center">狀態</td>
+      <td width="5%" align="center">通話質量</td>
+      <td width="5%" align="center">評價</td>
+      <td width="10%" align="center">操作</td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" class="trA" onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+      <td align="center">$rs[id]</td>
+      <td align="center">$rs[t_name]</td>
+      <td align="center">$rs[data]</td>
+      <td align="center">$rs[time]</td>
+      <td align="center">$rs[request]</td>
+      <td align="center">$rs[post]</td>
+      <td align="center">$rs[username]</td>
+      <td align="center">$rs[ya]</td>
+      <td align="center"><img border="0" src="$webdb[www_url]/member/images/star$rs[quality].gif" width="84" height="16"></td>
+      <td align="center" title="$rs[evas]">$rs[eva]</td>
+      <td align="center">$rs[ys]</td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF"> 
+      <td colspan="3" align="center"> $showpage </td>
+    </tr>
+  </form>
+</table>
+<br>
+<!--
+EOT;
+?>
+-->

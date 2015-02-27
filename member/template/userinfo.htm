@@ -1,0 +1,136 @@
+<!--
+<?php
+print <<<EOT
+-->
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+<style>
+.btn_orange{
+  border:none;
+  text-align:center;
+  font-size:20px;
+  color:#FFFFFF;
+  font-weight:bold;
+  line-height:35px;
+  background-color:#ff8400;
+  box-shadow:0px 8px 15px -5px #fed9b0 inset;
+  box-shadow:0px 0px 7px 0px #ff8400;
+  behavior:url("../js/PIE.htc");
+  position:relative;
+  cursor:pointer;
+}
+</style>
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">個人資料</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>個人資料</li>
+  </ul>
+<div style="float:right; width:710px">
+<p>
+可以修改您的註冊信息。<br />
+修改你要編輯的項目，請按“確認修改”按鈕。</p>
+<table id ="div_store_left" class="reg_table" width="100%" border="0" cellpadding="0" cellspacing="1">
+<form name="form1" method="post" action="?job=edit&" enctype="multipart/form-data" onsubmit="return ckregdatapost();">
+          <tr><th>帳號/用戶名:</th><td>$lfjid</td></tr>
+          <tr><th>郵箱:</th><td><input class="text" maxlength="255" name="email" value="$lfjdb[email]" $ipunt_email /> <br />忘記密碼時,取迴密碼使用</td></tr>
+          <tr><th>新密碼:</th><td><input class="text" maxlength="255" type="password" name="password" /> <br /></td></tr>
+          <tr><th>重複輸入密碼:</th><td><input class="text" maxlength="255" type="password" name="password2" /> <br /></td></tr>
+          <tr><th>舊密碼:</th><td><input class="text" maxlength="255" type="password" name="old_password" /> <br />如果脩改密碼或郵箱,必鬚輸入舊密碼
+						<script src="$webdb[www_url]/images/default/setday.js"></script>
+						<SCRIPT LANGUAGE="JavaScript">
+<!--
+var filed_id='';
+var filed_name='';
+function ckregdata(a,b){
+	filed_id=a;
+	filed_name=b;
+}
+function ckregdatapost(){
+	id_array=filed_id.split(',');
+	name_array=filed_name.split(',');
+	for(var i=0;i<id_array.length;i++){
+		if(id_array[i]!=''&&document.getElementById(id_array[i]).value==''){
+			alert("“"+name_array[i]+'”不能為空');
+			document.getElementById(id_array[i]).focus();
+			return false;
+		}
+	}
+}
+/*如要为页面布局考虑的话，妳可以把template\default\regfield.htm里边的内容复制过來，然後把以下两行删除即可*/
+AJAX.get("showRegDiv","$webdb[www_url]/do/regfield.php?job=reg");
+//-->
+</SCRIPT>		  </td></tr>
+          <tr><th>個人頭像:</th><td><span id="icon_web"> 
+                          <input type="text" name="icon" class="text" value="$lfjdb[icon]">
+                          </span> <span id="icon_file" style="display:none;"> 
+                          <input type="file" name="postfile">
+                          </span> 
+                          <input type="radio" name="icon_type" value="old" checked onclick="document.getElementById('icon_web').style.display='';document.getElementById('icon_file').style.display='none';">
+                          網絡地阯 
+                          <input type="radio" name="icon_type" value="new"  onclick="document.getElementById('icon_web').style.display='none';document.getElementById('icon_file').style.display='';">
+                          重新上傳</td></tr>
+          <tr><th>生日:</th><td><input class="text" maxlength="255" name="bday" value="$lfjdb[bday]" /> <br />格式為1981-08-13</td></tr>
+          <tr><th>所在城市:</th><td><SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/select_menu.js"></SCRIPT>
+						
+						<SCRIPT LANGUAGE="JavaScript">
+<!--
+var input_value='$lfjdb[cityid]';
+var input_name='cityid';
+var select_type='2';
+var file='../do/ajax_select.php';
+var DIV_idb='DIV_idb'+Math.random();
+var input_idb='input_idb'+Math.random();
+document.write("<span id='"+DIV_idb+"'></span>");
+document.write("<input type='hidden' id='"+input_idb+"' name='"+input_name+"'  size='5' value='"+input_value+"'>");
+get_div_S(DIV_idb,DIV_idb,input_idb,select_type,'',input_value);
+//-->
+</SCRIPT></td></tr>
+          <tr><th>性别:</th><td><input type="radio" name="sex" value="1" $sex_db[1]>
+                          男 
+                          <input type="radio" name="sex" value="2" $sex_db[2]>
+                          女 <br /></td></tr>
+          <tr><th>QQ:</th><td><input class="text" maxlength="255" name="oicq" value="$lfjdb[oicq]" /> <br /></td></tr>
+          <tr><th>Skype:</th><td><input class="text" maxlength="255" name="msn" value="$lfjdb[msn]" /> <br /></td></tr>
+          <tr><th>個人主頁:</th><td><input class="text" maxlength="255" name="homepage" value="$lfjdb[homepage]" /> <br /></td></tr>
+          <tr><th>自我介紹:</th><td><input class="text" maxlength="255" name="introduce" value="$lfjdb[introduce]" /> <br /></td></tr>
+          <tr><th>聯係地阯:</th><td><input class="text" maxlength="255"  name="address" value="$lfjdb[address]"> <br /></td></tr>
+          <tr><th>郵政編碼:</th><td><input class="text" maxlength="255" name="postalcode" value="$lfjdb[postalcode]" /> <br /></td></tr>
+          <tr><th>聯係電話:</th><td><input class="text" maxlength="255" name="telephone" value="$lfjdb[telephone]" /> <br /></td></tr>
+          <tr><th>聯係手機:</th><td><input class="text" maxlength="255" name="mobphone" value="$lfjdb[mobphone]" $ipunt_mob /> <br /></td></tr>
+          <tr><th>身份證號碼:</th><td><input class="text" maxlength="255" name="idcard" value="$lfjdb[idcard]" $ipunt_idcard /> <br /></td></tr>
+          <tr><th>真實姓名:</th><td><input class="text" maxlength="255" name="truename" value="$lfjdb[truename]" $ipunt_idcard /> <br /></td></tr>
+          <tr><th></th><td>                          <input type="submit" name="Submit3" value=" 確 認 修 改 " class="btn_orange">
+                          <input type="hidden" name="step" value="2">
+</td></tr>
+      </form>
+	  </table>
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+</div>  
+</div>
+    </div>
+
+</div>
+<!--
+EOT;
+?>
+-->

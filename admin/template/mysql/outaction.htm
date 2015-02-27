@@ -1,0 +1,46 @@
+<!--
+<?php
+print <<<EOT
+-->
+<table width='100%' cellspacing='1' cellpadding='3' class='tablewidth'>
+  <tr class="head"> 
+    <td colspan="3"> 
+      <div align='center'>数据库备份完毕,以下文件占用服务器空間为:<b><font color='#FF0000'>{$rsdb[totalsize]} 
+        兆(M)</font></b></div>
+    </td>
+  </tr>
+  <tr bgcolor='#FFFFFF'> 
+    <td colspan="3">备份完毕,现在妳可以點擊下载，右键點擊另存。<br>
+      不想下载也可以，因为已经自动备份到服务器里了,存放的目录是 <font color="#0000FF">cache/mysql_bak/$rand_dir</font>。<br>
+      以後如果转移空間了,請上传整個SQL数据库文件目录到新空間里,然後在地阯栏运行 http://妳的網阯/数据库SQL文件目录/index.php 
+      就可以按步骤还原数据了,还原之後,妳必须要修改数据库配置文件data/mysql_config.php为新空間的配置信息,才能正常运行.<br>
+      如果妳想在现有空間还原数据库的话,妳可以选择在後台还原数据库.也可以在地阯栏输入網阯 $webdb[www_url]/cache/mysql_bak/$rand_dir/index.php 
+      也是可以还原的.这样的好处是可以选择更换数据库编碼. 此目录$rand_dir,妳可以更换为其他的名字或移动到其他目录.现在是随机生成的.以防止别外人猜中而带來安全隐患.</td>
+  </tr>
+  <!--
+EOT;
+//for($j=1;$j<=$rsdb[sqlnum];$j++){
+foreach($rsdb[sqlsize] AS $key=>$size){
+print <<<EOT
+-->
+  <tr bgcolor='#FFFFFF'> 
+    <td width="3%" align="center">$key</td>
+    <td width="48%"> 
+      <input type="checkbox" name="checkbox" value="checkbox">
+      <a href="../cache/mysql_bak/$rand_dir/$key.sql" target="_blank">$key.sql</a> 
+    </td>
+    <td width="49%">{$size} (K)</td>
+  </tr>
+  <!--
+EOT;
+}
+print <<<EOT
+-->
+  <tr bgcolor='#FFFFFF'> 
+    <td colspan="3" align="center">以上数据库文件总共占用空間:<b><font color='#FF0000'>{$rsdb[totalsize]}兆(M)</font></b></td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

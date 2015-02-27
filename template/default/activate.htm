@@ -1,0 +1,52 @@
+<!--
+<?php
+print <<<EOT
+-->
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">激活帐號</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>激活帐號</li>
+  </ul>
+<div style="background:#FEEBA9; float:right; width:710px">
+       <div style="text-align:center; height:45px; line-height:45px; margin:0 auto; font-weight:bold; color:#F7987A">激活帐號</div>
+       <div style="text-align:center; height:45px; line-height:45px; margin:0 auto; color:#F7987A">系统会自动髮送一封郵件到妳的郵箱,妳需要點擊郵件里边的内容,才能激活妳的帐號!</div>
+
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:#FEEBA9 1px solid">
+        <form name="form1" method="post" action="?action=send">
+                <tr> 
+                  <td align="center" style="line-height:55px; text-align:center">妳要激活的帐號是: 
+                    <input type="text" name="atc_username" value="$username" style="height:25px; line-height:25px">
+                    <br>
+                    接收郵件的郵箱是:
+                    <input type="text" name="atc_email" value="$email" style="height:25px; line-height:25px">
+                    <p></p>
+
+                    <input type="submit" name="Submit" value="申請激活郵件"  class="button">
+                  </td>
+                </tr>
+        </form>
+              </table>
+	  
+</div>
+
+  
+</div>
+    </div>
+
+
+
+</div>
+<!--
+EOT;
+?>
+-->

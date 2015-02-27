@@ -1,0 +1,226 @@
+<!--
+<?php
+include(dirname(__FILE__)."/map.php");
+$onlineip = ipfrom($onlineip);
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="baseinfo">
+  <tr>
+    <td class="infoleft">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="memberdt">
+          <tr>
+            <td class="head">
+            	<div class="FL">会员动态</div>
+                <div class="FR">
+<!--
+EOT;
+if($pmNUM){print <<<EOT
+-->
+            		<a href="pm.php?job=list" style="color:red;">妳有新的消息,請注意查收!!</a> 
+<!--
+EOT;
+}else{print <<<EOT
+-->
+            		<a href="pm.php?job=list">妳暂時没有新消息!</a> 
+<!--
+EOT;
+}print <<<EOT
+-->
+                </div>
+            </td>
+          </tr>
+          <tr>
+            
+          <td class="cont"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="info1">
+                  <tr>
+                    <td>
+                  <div>预约总数: {$course_uNum} 条 
+                  </div>
+                  <div>妳的{$webdb[MoneyName]}: <img src="images/money.gif"> 
+                       <span> $lfjdb[money]</span> {$webdb[MoneyDW]}</div>
+					   
+                  <div>評價总数: {$CommentNum} 条 
+                  </div>
+                  <div>收藏总数: {$collectionNum} 条</div>
+				  
+                    </td>
+                  </tr>
+                </table>
+
+
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spaceTable" height="140">
+                  <tr> 
+                    <td>
+					
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_course_u WHERE u_id='$lfjuid' and ktime>'$timestamp' ORDER BY ktime ASC LIMIT 1");
+while($rss = $db->fetch_array($query)){
+$rss[ktime]=$rss[ktime]-$timestamp;
+print <<<EOT
+-->
+距離下次預約課程開課時間還有：
+<br />
+<span id="endtime" style="font-size:18px; color:#FF0000; font-weight:bold; height:32px; line-height:32px; padding:10px 0px">$rss[ktime]</span>
+<script type="text/javascript">
+var CID = "endtime";
+if(window.CID != null)
+{
+var iTime = document.getElementById(CID).innerText;
+var Account;
+RemainTime();
+}
+function RemainTime()
+{
+var iDay,iHour,iMinute,iSecond;
+var sDay="",sHour="",sMinute="",sSecond="",sTime="";
+if (iTime >= 0)
+{
+iDay = parseInt(iTime/24/3600);
+if (iDay > 0)
+{
+sDay = iDay + "天";
+}
+iHour = parseInt((iTime/3600)%24);
+if (iHour > 0){
+sHour = iHour + "小時";
+}
+iMinute = parseInt((iTime/60)%60);
+if (iMinute > 0){
+sMinute = iMinute + "分鍾";
+}
+iSecond = parseInt(iTime%60);
+if (iSecond >= 0){
+sSecond = iSecond + "秒";
+}
+if ((sDay=="")&&(sHour=="")){
+sTime="" + sMinute+sSecond + "";
+}
+else
+{
+sTime=sDay+sHour+sMinute+sSecond;
+}
+if(iTime==0){
+clearTimeout(Account);
+sTime="課程时间到了！";
+}
+else
+{
+Account = setTimeout("RemainTime()",1000);
+}
+iTime=iTime-1;
+}
+else
+{
+sTime="課程结束！";
+}
+document.getElementById(CID).innerHTML = sTime;
+}
+</script>
+
+<br /> 
+講師：<a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[t_id]" target="_parent">$rss[t_name]</a>
+ 
+<br /> 
+※妳可以在開課前的30分鍾取消已經預約的課程。
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+<!--
+EOT;
+$query = $db->query("SELECT COUNT(*) AS Num from js_course_u WHERE u_id='$lfjuid' and ktime>'$timestamp'");
+while($rss = $db->fetch_array($query)){
+print <<<EOT
+-->
+<!--
+EOT;
+if($rss[Num]=='0'){
+print <<<EOT
+-->
+<div style="background:url($webdb[www_url]/member/images/default/c.jpg) no-repeat 0px 10px; width:480px; height:130px; float:left">
+<a href="$webdb[www_url]/list.php?fid=1" target="_parent" style="font-size:14px; font-weight:bold; color:#FF9804; padding-left:140px; height:130px; line-height:130px; display:block">您最近沒有預約安排！</a>
+</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+
+
+                   </td>
+                  </tr>
+                </table>
+
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="inforight">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="myinfo">
+          <tr>
+            <td class="head">我的個人资料</td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="picword">
+                  <tr>
+                    <td class="pic"><img src="$lfjdb[icon]" onerror="this.src='../images/img/noface.jpg'" width="80" height="80"></td>
+                    <td class="word">
+                    	用户UID: <span>$lfjuid</span><br/>
+                        帐號: <span>$lfjid</span><br/>
+                        級別: <span>$groupdb[grouptitle]</span> ({$lfjdb[C][endtime]})
+                    </td>
+                  </tr>
+                </table>
+				<div class="more">
+                	郵箱: <span>$lfjdb[email]</span> <br/>
+                    我來自: <em>$onlineip</em><br/>
+                    注册時間: <span>$lfjdb[regdate]</span> <br/>
+                    上次登錄時間: <span>$lfjdb[lastvist]</span> 
+                </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="usersorttable">
+  <tr>
+    <td class="head">推薦講師</td>
+  </tr>
+  <tr>
+    <td class="cont">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content WHERE yz='1' ORDER BY levels DESC,id DESC LIMIT 12");
+while($rss = $db->fetch_array($query)){
+$rss[posttime]=date("Y/m/d",$rss[posttime]);
+print <<<EOT
+-->
+  <div class="listsort">
+  <div class="m"><a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]" target="_parent"><img src="$webdb[www_url]/upload_files/$rss[picurl]" width="120"></a></div>
+  <div class="c"><a href="$webdb[www_url]/bencandy.php?fid=1&id=$rss[id]" target="_parent"><span>$rss[title]</span></a></div>
+  </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

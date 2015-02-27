@@ -1,0 +1,114 @@
+<!--
+<?php
+$rsdb[price] || $rsdb[price]='';
+print <<<EOT
+--> 
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+
+<div class="contents" id="lesson">
+    <h2 class="bgorange">課程預約</h2>
+    <ul class="pnkz">
+        <li><a href="$webdb[www_url]/">HOME</a> ></li>
+        <li>預約講師：{$rsdb[title]}</li>
+    </ul>
+    
+    <div id="photolarge" styel="height:300px;">
+        <img src="$rsdb[picurl]" alt="reggie" class="schedule_photo"  width="280" />
+    </div>
+    <div>
+        <table class="tborange" width="418">
+            <tr>
+                <th>講師名</th>
+                <td id="koushi_name">{$rsdb[title]}</td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td><!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content_1 WHERE id='$rsdb[id]'");
+while($rs = $db->fetch_array($query)){
+print <<<EOT
+-->
+$rs[sex]
+<!--
+EOT;
+}
+print <<<EOT
+-->性</td>
+            </tr>
+            <tr>
+                <th>語言水平</th>
+                <td><!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content_1 WHERE id='$rsdb[id]'");
+while($rs = $db->fetch_array($query)){
+print <<<EOT
+-->
+$rs[language]
+<!--
+EOT;
+}
+print <<<EOT
+--></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="jikoshoukai"><!--
+EOT;
+$query = $db->query("SELECT * FROM js_fenlei_content_1 WHERE id='$rsdb[id]'");
+while($rs = $db->fetch_array($query)){
+print <<<EOT
+-->
+$rs[content]
+<!--
+EOT;
+}
+print <<<EOT
+--></td>
+            </tr>
+        </table>
+    </div>
+
+<h3 class="orange clear algnC" style="margin: 20px 0px 0px; padding: 5px 0px 2px 15px; font-weight: bold; clear: both; text-align: center; width: 695px; background-color: rgb(255, 187, 4); font-size: 15px; color: rgb(255, 255, 255); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 19.5px; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+點擊這裡申請{$rsdb[title]}</h3>
+<div class="orangebox algnC" style="margin: 0px; padding: 20px; text-align: center; background-color: rgb(254, 235, 183); color: rgb(68, 68, 68); font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.5px; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+	<p style="font-size: 24px; font-weight: bold;">日期和時間：<span style="color: rgb(255, 102, 0);">{$rsdb[data]} ($times_w) {$rsdb[time]}～</span></p>
+	<p style="font-size: 18px; font-weight: bold; color: rgb(255, 171, 4);">　</p>
+	<form method="post" style="margin: 0px; padding: 0px;" action="lesson_post.php">
+		<input name="id" type="hidden" value="{$id}" />
+		<input name="data" type="hidden" value="{$rsdb[data]}" />
+		<input name="time" type="hidden" value="{$rsdb[time]}" />
+		<input name="c_id" type="hidden" value="{$id}" />
+		<input name="t_id" type="hidden" value="{$rsdb[id]}" />
+		<input name="u_id" type="hidden" value="{$lfjuid}" />
+		<input name="t_name" type="hidden" value="{$rsdb[title]}" />
+		<p><label for="request">學習內容的要求</label>：<span class="Apple-converted-space">&nbsp;</span><select name="request">
+		<span class="Apple-converted-space"></span>
+		<option value="無">無</option>
+		<span class="Apple-converted-space"></span>
+		<option value="免費的談話">免費的談話</option>
+		<span class="Apple-converted-space"></span>
+		<option value="文本">文本</option>
+		<span class="Apple-converted-space"></span>
+		<option value="其他">其他</option>
+		<span class="Apple-converted-space"></span></select></p>
+		<p>　</p>
+		<center><input type="image" src="$webdb[www_url]/images/img/btn_booklesson.gif" name="B1"></center>
+	</form>
+	<br>
+　<p>請按“我要預約”按鈕，完成申請</div>    
+</div>
+
+
+</div>
+
+
+<!--
+EOT;
+?>
+-->

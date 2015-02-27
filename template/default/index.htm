@@ -1,0 +1,626 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<div id="main">
+<div style="position:relative;">
+
+<div id="loopedslider">
+
+<script type='text/javascript'> 
+var widths=960;
+var heights=316;
+var counts=4;
+ 
+				img1=new Image ();img1.src='$webdb[www_url]/upload_files/other/ot/top_slider_cam130924.jpg';
+				url1=new Image ();url1.src='$webdb[www_url]/';
+				
+				img2=new Image ();img2.src='$webdb[www_url]/upload_files/other/ot/top_slider_cam130918.jpg';
+				url2=new Image ();url2.src='$webdb[www_url]/';
+				
+				img3=new Image ();img3.src='$webdb[www_url]/upload_files/other/ot/top_slider_cam130911.jpg';
+				url3=new Image ();url3.src='$webdb[www_url]/';
+				
+				img4=new Image ();img4.src='$webdb[www_url]/upload_files/other/ot/top_slider_cam130904.jpg';
+				url4=new Image ();url4.src='$webdb[www_url]/';
+				
+var nn=1;
+var key=0;
+function change_img()
+{if(key==0){key=1;}
+else if(document.all)
+{document.getElementById("pic").filters[0].Apply();document.getElementById("pic").filters[0].Play(duration=2);}
+eval('document.getElementById("pic").src=img'+nn+'.src');
+eval('document.getElementById("url").href=url'+nn+'.src');
+eval('document.getElementById("url").target="blank"');
+for (var i=1;i<=counts;i++){document.getElementById("xxjdjj"+i).className='axx';}
+document.getElementById("xxjdjj"+nn).className='bxx';
+nn++;if(nn>counts){nn=1;}
+tt=setTimeout('change_img()',4000);}
+function changeimg(n){nn=n;window.clearInterval(tt);change_img();}
+document.write('<style>');
+document.write('.axx{padding:1px 7px;border-left:#cccccc 1px solid;}');
+document.write('a.axx:link,a.axx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#666;}');
+document.write('a.axx:active,a.axx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#999;}');
+document.write('.bxx{padding:1px 7px;border-left:#cccccc 1px solid;}');
+document.write('a.bxx:link,a.bxx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#D34600;}');
+document.write('a.bxx:active,a.bxx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#D34600;}');
+document.write('</style>');
+document.write('<div style="width:'+widths+'px;height:'+heights+'px;overflow:hidden;text-overflow:clip;">');
+document.write('<div><a id="url"><img id="pic" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width='+widths+' height='+heights+' /></a></div>');
+document.write('<div style="filter:alpha(style=1,opacity=10,finishOpacity=80);background: #888888;width:100%-2px;text-align:right;top:-12px;position:relative;margin:1px;height:12px;padding:0px;margin:0px;border:0px;">');
+for(var i=1;i<counts+1;i++){document.write('<a href="javascript:changeimg('+i+');" id="xxjdjj'+i+'" class="axx" target="_self">'+i+'</a>');}
+document.write('</div></div>');
+change_img();
+</script>
+
+
+
+</div>
+
+
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+
+
+
+
+<div class="contents">
+    
+    <p><a href="$webdb[www_url]/do/reg.php"><img src="$webdb[www_url]/upload_files/other/ot/top_bnr_trial.jpg" width="710" height="139" alt="無料体験登録はこちら"><br></a></p>
+    <div class="center">
+        <img src="$webdb[www_url]/upload_files/other/ot/top_title1.jpg" width="480" height="36" alt="授業料はいくらかかるの"><br>
+        <div class="fee">
+            <a href="$webdb[www_url]/fee.htm"><img src="$webdb[www_url]/upload_files/other/ot/top_bnr_fee.jpg" width="478" height="161" alt="衝撃の１００円英会話！"><br></a>
+        </div>
+
+        <img src="$webdb[www_url]/upload_files/other/ot/top_title2.jpg" width="480" height="36" alt="動画で見る授業の様子"><br>
+        <div class="lesson clearfix">
+            <dl>
+                <dt>
+                <object width="240" height="205"><param name="movie" value="https://www.youtube.com/v/4v39WBEOD5U&amp;hl=ja_JP&amp;fs=1&amp;rel=0&amp;wmode=transparent"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="https://www.youtube.com/v/4v39WBEOD5U&amp;hl=ja_JP&amp;fs=1&amp;rel=0&amp;wmode=transparent" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="transparent" width="240" height="205"></object>
+                </dt>
+                <dd>
+                <p>スカイプを使ってのぐんぐん英会話デモレッスン『息子を寝かしつけた後の主婦編』です！<br>日本語の話せる講師と楽しいレッスン！！無料オンライン電話“Skype”を使って会話とチャットを楽しみながら授業を行います。</p>
+                <p class="arrow"><a href="$webdb[www_url]/skype.htm">スカイプの使い方</a></p>
+                <p class="btn"><a href="$webdb[www_url]/do/reg.php"><img src="$webdb[www_url]/upload_files/other/ot/common_btn_trial.jpg" width="200" height="44" alt="無料体験はこちら"></a></p>
+                </dd>
+            </dl>
+        </div>
+
+        <img src="$webdb[www_url]/upload_files/other/ot/top_title3.jpg" width="480" height="36" alt="ぐんぐん英会話５つの特徴"><br>
+        <div class="point clearfix">
+            <p><img src="$webdb[www_url]/upload_files/other/ot/top_point1.jpg" width="462" height="122" alt="１.毎日、朝１０時～深夜1時の幅広いレッスン時間帯！"></p>
+            <p><img src="$webdb[www_url]/upload_files/other/ot/top_point2.jpg" width="462" height="122" alt="２.スカイプを使って、１対１のマンツーマン！webカメラ、マイクを用いた充実のレッスン！"></p>
+            <p><img src="$webdb[www_url]/upload_files/other/ot/top_point3.jpg" width="462" height="122" alt="３.衝撃の１００円英会話！！"></p>
+            <p><img src="$webdb[www_url]/upload_files/other/ot/top_point4.jpg" width="462" height="122" alt="４.英語が苦手な方から、上級者まで楽しめる！"></p>
+            <p><img src="$webdb[www_url]/upload_files/other/ot/top_point5.jpg" width="462" height="122" alt="５.日本人スタッフが、しっかりサポートします！"></p>
+            <ul>
+                <li><a href="$webdb[www_url]/do/reg.php"><img src="$webdb[www_url]/upload_files/other/ot/common_btn_trial.jpg" width="200" height="44" alt="無料体験はこちら"></a></li>
+                <li><a href="$webdb[www_url]/faq.htm"><img src="$webdb[www_url]/upload_files/other/ot/common_btn_faq.jpg" width="200" height="44" alt="よくある質問"></a></li>
+            </ul>
+        </div>
+
+        <div class="mt20 clearfix">
+             <div class="floatL ps20 bd"><img src="$webdb[www_url]/upload_files/other/verisign.jpg"><br /> <a href="https://www.verisign.co.jp/ssl-certificate/" target="_blank"  style="color:#000000; text-decoration:none; font:bold 12px 'ＭＳ ゴシック',sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">SSLとは？</a>
+            </div>
+            <div class="floatR w280">
+                <b>SSLによるセキュリティ通信について</b><br>
+                當サイトでは、お客様が入力された個人情報を安全に送受信するために、SSL (Secure Socket Layer) を利用した暗號化通信を採用しています。
+            </div>
+        </div>
+    </div>
+
+
+<div class="right">
+<script type="text/javascript">//<![CDATA[
+// タブの切り替え
+var old_menu= '';//sub menu
+function seltab(submenu,val,tab) {
+document.getElementById("box1").style.display = 'none';
+submenu = document.getElementById(submenu).style;
+
+// folder control
+if( old_menu != submenu ) {
+if( old_menu !='' ) {
+old_menu.display = 'none';
+}
+submenu.display = 'block';
+old_menu = submenu;
+for(i=1;i<3;i++){
+if( i != val){
+document.getElementById(btn0+i).className = "";
+}else{
+document.getElementById(btn0+val).className = " activ";
+}
+}
+}
+}
+//]]>
+</script>
+
+<a href="javascript:seltab('box1',1,'btn01');" id="btn01"><img src="$webdb[www_url]/upload_files/other/ot/top_title4.jpg" width="84" height="35" alt="TOPICS"></a><a href="javascript:seltab('box2',2,'btn02');" id="btn02"><img src="$webdb[www_url]/upload_files/other/ot/top_title5.jpg" width="136" height="35" alt="Teacher&#39;s News"></a><br>
+<div class="topics" id="box1" style="display:block;">
+<p class="topics_inner">
+2013年08月27日<br>
+<a href="$webdb[www_url]/">8月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年08月21日<br>
+<a href="$webdb[www_url]/">８月２１日（水）の現地狀況について</a>
+</p>
+<p class="topics_inner">
+2013年08月20日<br>
+<a href="$webdb[www_url]/">昨日より発生中のマニラ市内洪水について</a>
+</p>
+<p class="topics_inner">
+2013年08月20日<br>
+<a href="$webdb[www_url]/">マカティオフィス講師?レッスン全休講のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年08月19日<br>
+<a href="$webdb[www_url]/">本日発生中のマニラ市内洪水について</a>
+</p>
+<p class="topics_inner">
+2013年08月06日<br>
+<a href="$webdb[www_url]/">8月9日の講師スケジュールにつきまして</a>
+</p>
+<p class="topics_inner">
+2013年08月02日<br>
+<a href="$webdb[www_url]/">ホームページがうまく表示されない場合の対処法につきまして</a>
+</p>
+<p class="topics_inner">
+2013年07月30日<br>
+<a href="$webdb[www_url]/">８月１日以降の予約が出來ます！＆新機能のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年07月08日<br>
+<a href="$webdb[www_url]/">星野達彦著「英語はアジアで学べばうまくいく」にて、ぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2013年07月03日<br>
+<a href="$webdb[www_url]/">7月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年06月15日<br>
+<a href="$webdb[www_url]/">6月16日（日）レッスンサポート業務についてのお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年05月22日<br>
+<a href="$webdb[www_url]/">5月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年05月11日<br>
+<a href="$webdb[www_url]/">5月13日の講師スケジュールにつきまして</a>
+</p>
+<p class="topics_inner">
+2013年04月20日<br>
+<a href="$webdb[www_url]/">キャンセルがより便利に！／新機能のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年04月19日<br>
+<a href="$webdb[www_url]/">４月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年04月01日<br>
+<a href="$webdb[www_url]/#topics/skype4">スカイプのウイルスについてのご連絡</a>
+</p>
+<p class="topics_inner">
+2013年03月25日<br>
+<a href="$webdb[www_url]/#topics/holyweek2013">ホーリーウィーク（聖週間）の影響につきまして</a>
+</p>
+<p class="topics_inner">
+2013年03月10日<br>
+<a href="$webdb[www_url]/#topics/meet/mar2013">３月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年02月18日<br>
+<a href="$webdb[www_url]/#topics/morning_option_announce">早朝レッスンが正式スタート！！是非、お申し込みください！</a>
+</p>
+<p class="topics_inner">
+2013年01月29日<br>
+<a href="$webdb[www_url]/#topics/meet/feb2013">2月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2013年01月26日<br>
+<a href="$webdb[www_url]/#topics/nowhiring">現地オペレーション/マネージメントスタッフを募集しています</a>
+</p>
+<p class="topics_inner">
+2013年01月15日<br>
+<a href="$webdb[www_url]/#topics/meet/jan2013">1月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年12月30日<br>
+<a href="$webdb[www_url]/#topics/earlymorning_lesson">2月1日より早朝レッスン正式スタート</a>
+</p>
+<p class="topics_inner">
+2012年12月22日<br>
+<a href="$webdb[www_url]/#topics/trial2point">「無料体験レッスン」迴数変更のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年12月06日<br>
+<a href="$webdb[www_url]/#topics/callQualityReport">「通話品質報告」ボタン設置のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年12月05日<br>
+<a href="$webdb[www_url]/#topics/meet/dec">12月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年11月28日<br>
+<a href="$webdb[www_url]/#topics/network_upgrade">通信迴線のアップグレードを行いました！</a>
+</p>
+<p class="topics_inner">
+2012年11月21日<br>
+<a href="$webdb[www_url]/#topics/nenmatsu3">【クリスマス、年末年始休講】スケジュールについて</a>
+</p>
+<p class="topics_inner">
+2012年11月21日<br>
+<a href="$webdb[www_url]/#topics/Early_morning_lesson_plans2">早朝レッスンプラン期間延長のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年11月16日<br>
+<a href="$webdb[www_url]/#topics/meet_Nov">11月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年10月29日<br>
+<a href="$webdb[www_url]/#topics/Early_morning_lesson_holiday">早朝レッスンお休みのお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年10月08日<br>
+<a href="$webdb[www_url]/#topics/meet_Oct">10月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年10月06日<br>
+<a href="$webdb[www_url]/#topics/Early_morning_lesson_plans">早朝レッスン期間延長のお知らせ！！11月30日まで！</a>
+</p>
+<p class="topics_inner">
+2012年09月27日<br>
+<a href="$webdb[www_url]/#topics/meet_Sep">9月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年09月15日<br>
+<a href="$webdb[www_url]/#topics/third_anniversary">ぐんぐん英会話３周年記念キャンペーン！</a>
+</p>
+<p class="topics_inner">
+2012年08月27日<br>
+<a href="$webdb[www_url]/#topics/meet_Aug">8月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年08月24日<br>
+<a href="$webdb[www_url]/#topics/cosplay_day">8/25(土)、8/26(日) COSPLAY DAYを開催致します！</a>
+</p>
+<p class="topics_inner">
+2012年08月07日<br>
+<a href="$webdb[www_url]/#topics/weather_alert">【お知らせ】８月７日（火）大雨の影響によるレッスン休講について</a>
+</p>
+<p class="topics_inner">
+2012年07月21日<br>
+<a href="$webdb[www_url]/#topics/bokunowatashino">僕の私のぐんぐん英会話について</a>
+</p>
+<p class="topics_inner">
+2012年07月02日<br>
+<a href="$webdb[www_url]/#topics/paypal1">Paypalでのお支払いにつきまして</a>
+</p>
+<p class="topics_inner">
+2012年07月01日<br>
+<a href="$webdb[www_url]/#topics/ev-ssl">全ページ SSL に対応いたしました</a>
+</p>
+<p class="topics_inner">
+2012年07月01日<br>
+<a href="$webdb[www_url]/#topics/meet_July4">7月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年06月27日<br>
+<a href="$webdb[www_url]/#topics/million">レッスン100万迴を達成いたしました！！</a>
+</p>
+<p class="topics_inner">
+2012年06月20日<br>
+<a href="$webdb[www_url]/#topics/meet_June4">6月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年06月17日<br>
+<a href="$webdb[www_url]/#topics/cam120601">100万迴突破記念キャンペーンについて</a>
+</p>
+<p class="topics_inner">
+2012年05月29日<br>
+<a href="$webdb[www_url]/#topics/renewal">ぐんぐん英会話WEBサイトリニューアルのお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年04月24日<br>
+<a href="$webdb[www_url]/#topics/website_4">WEBサイトメンテナンスのお知らせ ※4月26日(木）AM2：00－3：00</a>
+</p>
+<p class="topics_inner">
+2012年04月10日<br>
+<a href="$webdb[www_url]/#topics/meet_april3">4月度講師レッスン講習会のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年04月01日<br>
+<a href="$webdb[www_url]/#topics/maintenance1">サービス強化のためのメンテナンスを行います</a>
+</p>
+<p class="topics_inner">
+2012年03月30日<br>
+<a href="$webdb[www_url]/#topics/skype2">スカイプのウイルスについてのご連絡</a>
+</p>
+<p class="topics_inner">
+2012年03月26日<br>
+<a href="$webdb[www_url]/#topics/holyweek2012">ホーリーウィーク（聖週間）のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年03月23日<br>
+<a href="$webdb[www_url]/#topics/facebook">ぐんぐん英会話公式フェイスブックページ開設のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年03月19日<br>
+<a href="$webdb[www_url]/#topics/system2">システム障害復旧のお知らせ</a>
+</p>
+<p class="topics_inner">
+2012年03月19日<br>
+<a href="$webdb[www_url]/#topics/system3">本日のレッスンご予約について</a>
+</p>
+<p class="topics_inner">
+2012年03月10日<br>
+<a href="$webdb[www_url]/#topics/system">システム障害についてお詫び</a>
+</p>
+<p class="topics_inner">
+2012年03月08日<br>
+<a href="$webdb[www_url]/#topics/website_3">WEBサイトメンテナンスのお知らせ ※3月9日(金）AM2：00－5：00</a>
+</p>
+<p class="topics_inner">
+2012年02月23日<br>
+<a href="$webdb[www_url]/#topics/website_2">WEBサイトメンテナンスのお知らせ ※2月24日(金）AM2：00－5：00</a>
+</p>
+<p class="topics_inner">
+2012年02月21日<br>
+<a href="$webdb[www_url]/#topics/website">WEBサイトメンテナンスのお知らせ ※2月23日(木）AM2：00－5：00</a>
+</p>
+<p class="topics_inner">
+2012年01月21日<br>
+<a href="$webdb[www_url]/#topics/kensaku">講師検索機能がパワーアップ！</a>
+</p>
+<p class="topics_inner">
+2012年01月11日<br>
+<a href="$webdb[www_url]/#topics/recruit2">【急募】フィリピン現地スタッフ募集中！</a>
+</p>
+<p class="topics_inner">
+2011年12月31日<br>
+<a href="$webdb[www_url]/#topics/newyearcamp">ウィンターキャンペーン結果発表！！</a>
+</p>
+<p class="topics_inner">
+2011年12月20日<br>
+<a href="$webdb[www_url]/#topics/nenmatsu2">【クリスマス、年末年始休講】スケジュールについて</a>
+</p>
+<p class="topics_inner">
+2011年12月16日<br>
+<a href="$webdb[www_url]/#topics/newyear2012">年末年始キャンペーンのお知らせ！！</a>
+</p>
+<p class="topics_inner">
+2011年12月15日<br>
+<a href="$webdb[www_url]/#topics/meet_dece2">12月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年12月10日<br>
+<a href="$webdb[www_url]/#topics/site2">検索絞込みフォームが変更になりました！！</a>
+</p>
+<p class="topics_inner">
+2011年11月11日<br>
+<a href="$webdb[www_url]/#topics/meet_november2">11月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年10月29日<br>
+<a href="$webdb[www_url]/#topics/toiec">使用可能TOIEC教材を追加しました！！</a>
+</p>
+<p class="topics_inner">
+2011年10月15日<br>
+<a href="$webdb[www_url]/#topics/material">使用可能教材一覧ページを更新しました！！</a>
+</p>
+<p class="topics_inner">
+2011年10月14日<br>
+<a href="$webdb[www_url]/#topics/meet_oct2">10月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年09月29日<br>
+<a href="$webdb[www_url]/#topics/500000">レッスン５０万迴達成！！！</a>
+</p>
+<p class="topics_inner">
+2011年09月18日<br>
+<a href="$webdb[www_url]/#topics/2year">ぐんぐん英会話サービス開始2周年！！</a>
+</p>
+<p class="topics_inner">
+2011年09月02日<br>
+<a href="$webdb[www_url]/#topics/meet_september2">9月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年08月05日<br>
+<a href="$webdb[www_url]/#topics/meet_august2">8月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年07月13日<br>
+<a href="$webdb[www_url]/#topics/recruit1">【急募】フィリピン現地スタッフ募集中！</a>
+</p>
+<p class="topics_inner">
+2011年06月10日<br>
+<a href="$webdb[www_url]/#topics/meet_june3">6月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年06月07日<br>
+<a href="$webdb[www_url]/#topics/skypelogin2">スカイプ障害について</a>
+</p>
+<p class="topics_inner">
+2011年05月26日<br>
+<a href="$webdb[www_url]/#topics/skypelogin">スカイプログイン障害について</a>
+</p>
+<p class="topics_inner">
+2011年05月13日<br>
+<a href="$webdb[www_url]/#topics/meet_may2">5月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年04月16日<br>
+<a href="$webdb[www_url]/#topics/holyweek">【ホーリーウィーク（聖週間）】について</a>
+</p>
+<p class="topics_inner">
+2011年04月15日<br>
+<a href="$webdb[www_url]/#topics/meet_apr2">4月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年03月23日<br>
+<a href="$webdb[www_url]/#topics/donation_report">「東北地方太平洋沖地震』月会費一部寄付のご報告</a>
+</p>
+<p class="topics_inner">
+2011年03月13日<br>
+<a href="$webdb[www_url]/#topics/donation">「東北地方太平洋沖地震』月会費一部寄付制度のお知らせ</a>
+</p>
+<p class="topics_inner">
+2011年03月04日<br>
+<a href="$webdb[www_url]/#topics/meet_mar2">3月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年02月04日<br>
+<a href="$webdb[www_url]/#topics/meet_feb">2月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2011年02月04日<br>
+<a href="$webdb[www_url]/#topics/site">WEBサイトに新機能が加わります！！</a>
+</p>
+<p class="topics_inner">
+2011年02月01日<br>
+<a href="$webdb[www_url]/#topics/japanese2">日本語可能講師は【19名】在籍中！</a>
+</p>
+<p class="topics_inner">
+2011年01月10日<br>
+<a href="$webdb[www_url]/#topics/new_office">【東京オフィス移転】について</a>
+</p>
+<p class="topics_inner">
+2011年01月07日<br>
+<a href="$webdb[www_url]/#topics/meet_jan2">1月度講師レッスン講習会について</a>
+</p>
+<p class="topics_inner">
+2010年12月23日<br>
+<a href="$webdb[www_url]/#topics/skypedown">12月23日(木)スカイプ接続障害につきまして</a>
+</p>
+<p class="topics_inner">
+2010年12月20日<br>
+<a href="$webdb[www_url]/#topics/nenmatsu">【クリスマス、年末年始休講】スケジュールについて</a>
+</p>
+<p class="topics_inner">
+2010年09月30日<br>
+<a href="$webdb[www_url]/#topics/japanese">9月30日(水) 日本語可能講師は【18名】在籍中！</a>
+</p>
+<p class="topics_inner">
+2010年09月18日<br>
+<a href="$webdb[www_url]/#topics/1year">9月18日(土) ぐんぐん英会話サービス開始1周年！！</a>
+</p>
+</div>
+<div class="newteacher" id="box2" style="display:none;">
+<p class="topics_inner">
+                    <a href="$webdb[www_url]/#teacher/ELIJAH">ELIJAH先生</a>?
+                    <a href="$webdb[www_url]/#teacher/ACHEN">ACHEN先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Reiko">REIKO先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Gelo">GELO先生</a>?
+                10-19(土)よりレッスン開始です！
+</p>
+    <p class="topics_inner">
+                    <a href="$webdb[www_url]/#teacher/Cyrus">CYRUS先生</a>?
+                10-12(土)よりレッスン開始です！
+</p>
+    <p class="topics_inner">
+                    <a href="$webdb[www_url]/#teacher/Dux">DUX先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Kiyo">KIYO先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Jocelyn">JOCELYN先生</a>?
+                    <a href="$webdb[www_url]/#teacher/LORRAINE">LORRAINE先生</a>?
+                    <a href="$webdb[www_url]/#teacher/ZANG">ZANG先生</a>?
+                    <a href="$webdb[www_url]/#teacher/MARUH">MARUH先生</a>?
+                    <a href="$webdb[www_url]/#teacher/JUNKO">JUNKO先生</a>?
+                    <a href="$webdb[www_url]/#teacher/REEMA">REEMA先生</a>?
+                    <a href="$webdb[www_url]/#teacher/UME">UME先生</a>?
+                    <a href="$webdb[www_url]/#teacher/YUYUKA">YUYUKA先生</a>?
+                10-7(月)よりレッスン開始です！
+</p>
+    <p class="topics_inner">
+                    <a href="$webdb[www_url]/#teacher/Brice">BRICE先生</a>?
+                10-5(土)よりレッスン開始です！
+</p>
+    <p class="topics_inner">
+                    <a href="$webdb[www_url]/#teacher/Yanyan">YANYAN先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Sheeny">SHEENY先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Carly">CARLY先生</a>?
+                    <a href="$webdb[www_url]/#teacher/Zab">ZAB先生</a>?
+                9-23(月)よりレッスン開始です！
+</p>
+    </div>
+
+<img src="$webdb[www_url]/upload_files/other/ot/top_title6.jpg" alt="メディア掲載情報" width="220" height="36"><br>
+<div class="media">
+<p class="topics_inner">
+2013年04月12日<br>
+<a href="$webdb[www_url]/#media/newspaper_hokkaido">北海道新聞 4月10日夕刊全道版の社会面に掲載されました！</a>
+</p>
+<p class="topics_inner">
+2013年03月29日<br>
+<a href="$webdb[www_url]/#media/eikaiwa_guide">MONOQLO特別編集 100%ムックシリーズ 「英語教材完全ガイド」にてぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2012年09月27日<br>
+<a href="$webdb[www_url]/#media/asian_passion">NHK「ASIAN PASSION」にてぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2012年07月18日<br>
+<a href="$webdb[www_url]/#media/nhk_news">NHKニュースにぐんぐん英会話導入小学校の授業が紹介されました</a>
+</p>
+<p class="topics_inner">
+2012年06月15日<br>
+<a href="$webdb[www_url]/#media/anokuni">雑誌留学雑誌「あの国でこれがやりたい！」vol.47でぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2012年05月29日<br>
+<a href="$webdb[www_url]/#media/itmedia_security">ITmediaにぐんぐん英会話が紹介されました</a>
+</p>
+<p class="topics_inner">
+2012年02月27日<br>
+<a href="$webdb[www_url]/#media/diamond">週刊ダイヤモンド３月３日號にてぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2011年07月04日<br>
+<a href="$webdb[www_url]/#media/article_japan">japan.internet.comにて掲載されました！</a>
+</p>
+<p class="topics_inner">
+2011年05月08日<br>
+<a href="$webdb[www_url]/#media/oosaka-t">大阪ほんわかテレビ『１００円ビジネス最前線』でぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2011年04月20日<br>
+<a href="$webdb[www_url]/#media/sapio-t">小学館発行雑誌SAPIO 4/20日月號にぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2011年04月04日<br>
+<a href="$webdb[www_url]/#media/circus">KKベストセラーズCIRCUS 5月號にぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2011年03月04日<br>
+<a href="$webdb[www_url]/#media/nikkei-t">日経トレンディ4月號にぐんぐん英会話が紹介されました！</a>
+</p>
+<p class="topics_inner">
+2011年02月24日<br>
+<a href="$webdb[www_url]/#media/nikkei-28">日本経済新聞28面にぐんぐん英会話が紹介されました！</a>
+</p>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<!--
+EOT;
+?>
+-->

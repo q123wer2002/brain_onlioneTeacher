@@ -1,0 +1,41 @@
+<!--
+<?php
+if($lfjid){print <<<EOT
+--> 
+            <ul id="navibar_inner">
+            <li id="username">$lfjid 您好！</li>
+<!--
+EOT;
+if($lfjdb[groupid]=='12'){print <<<EOT
+-->
+            <li><a href="$webdb[www_url]/th.php?job=edit">&gt; 會員中心</a></li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+            <li><a href="$webdb[www_url]/member/">&gt; 會員中心</a></li>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            <li><a href="$webdb[www_url]/do/login.php?action=quit">&gt; 登出</a></li>
+        </ul>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+            <form name="form_login" method="post" action="$webdb[www_url]/do/login.php">
+			<input type="hidden" name="step" value="2">
+            <ul id="navibar_inner">
+                <li><label for="id">用戶名</label>&nbsp;<input class="text" id="id" maxlength="255" name="username" type="text" /></li>
+                <li><label for="password">密碼</label>&nbsp;<input class="text" id="password" maxlength="255" name="password" type="password" /></li>
+                <li><input type="image" src="$webdb[www_url]/images/img/header_btn_login.gif" alt="登錄" id="login_button"></li>
+                <li style="margin:7px 0 0 0;"><input type="checkbox" name="cookietime" class="checkbox" id="check" value="88886400">&nbsp;<label for="check">帮我自動登入下次訪問？</label><br /><div class="arrow"><a href="$webdb[www_url]/do/sendpwd.php">忘記密碼？</a></div></li>
+            </ul>
+        </form>
+
+<!--
+EOT;
+}?>
+-->

@@ -1,0 +1,67 @@
+<!--
+<?php 
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">我的收藏</td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" border="0" cellspacing="10" cellpadding="3" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+ 
+                <tr align="center" class="head_in"> 
+                  <td width="50%">講 師</td>
+                  
+                <td width="35%">開課時間</td>
+                <td width="15%">狀态/取消</td>
+                </tr>
+            <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$rs[Lurl]=get_info_url('',$rs[fid],$rs[city_id]);
+print <<<EOT
+-->
+
+                <tr class='trA' onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+                  
+                <td  align="left" style="border-bottom:#CCCCCC 1px dashed; line-height:30px"> <a href="$rs[url]" target="_blank" style="font-size:14px; font-weight:bold; color:#666666; padding-left:10px"> $rs[t_name]</a>
+                </td> 
+                  
+                  
+                  
+                <td align="center" style="border-bottom:#CCCCCC 1px dashed; line-height:30px"><span style="font-size:14px; color:#FF9804"><strong style="font-weight:bold">$rs[ktime]</strong></span></td>
+                  
+                 
+                  
+                <td align="center" style="border-bottom:#CCCCCC 1px dashed; line-height:30px"><span>$rs[del]</span></td>
+                </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+                <tr align="center"> 
+                  <td colspan="6">$showpage</td>
+                </tr>
+ 
+            </table>
+          </td>
+        </tr><tr><td class="foot"></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+ 
+
+<!--
+EOT;
+?>
+-->

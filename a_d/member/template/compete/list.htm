@@ -1,0 +1,239 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td width="100%" height="200" valign="top" class="Main"> 
+      
+      <!--
+EOT;
+if($job=='buy'){
+print <<<EOT
+-->
+      <table width="99%" border="0" cellspacing="1" cellpadding="3" class="dragTable">
+        <form name="form1" method="post" action="?">
+          <tr align="center" height="18" class='head' style="line-height:200%;"> 
+            <td colspan="2">購買广告</td>
+          </tr>
+          <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;"> 广告位名称:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;">{$rsdb[name]}</td>
+          </tr>
+          <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">投放天数:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;">{$rsdb[day]} 
+              天</td>
+          </tr>
+          <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">妳當前具有消费的积分数是:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;">{$webdb[MoneyName]} 
+              <font color="#FF0000"> <b>{$lfjdb[money]}</b></font> $webdb[MoneyDW]</td>
+          </tr>
+          <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">价格:(出价越高,越排前)</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;"> 
+              <input type="text" name="postdb[price]" size="5" value="$rsdb[price]">
+            </td>
+          </tr>
+          <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">广告文字内容:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;"> 
+              <input type="text" name="postdb[adword]">
+            </td>
+          </tr>
+          <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">广告链接地阯:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;"> 
+              <input type="text" name="postdb[adlink]" size="50">
+            </td>
+          </tr>
+          <tr> 
+            <td  width="29%"  >&nbsp;</td>
+            <td width="71%"  align="left" > 
+              <input type="submit" name="Submit" value=" 购 买 ">
+              <input type="hidden" name="step" value="2">
+              <input type="hidden" name="job" value="$job">
+              <input type="hidden" name="id" value="$id">
+            </td>
+          </tr>
+        </form>
+      </table>
+      <!--
+EOT;
+}elseif($job=='list'){
+print <<<EOT
+-->
+      <table width="99%" border="0" cellspacing="1" cellpadding="3" class="dragTable">
+        <tr align="center" height="18" class='head' style="line-height:200%;"> 
+          <td width="42%">广告位名称</td>
+          <td width="15%" >广告空位</td>
+          <td width="16%" >投放天数</td>
+          <td width="6%" >底价</td>
+          <td width="6%" >广告</td>
+          <td width="7%" >效果</td>
+          <td width="8%" >購買</td>
+        </tr>
+        <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+        <tr class="trA"  onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+          <td  width="42%" style="border-bottom:1px dotted #ccc;padding-left:5px;"> 
+            {$rs[name]}</td>
+          <td width="15%"  align="center" style="border-bottom:1px dotted #ccc;">{$rs[AdNum]}(個)</td>
+          <td width="16%"  align="center" style="border-bottom:1px dotted #ccc;">$rs[day]</td>
+          <td width="6%"  align="center" style="border-bottom:1px dotted #ccc;">$rs[price]</td>
+          <td width="6%"  align="center" style="border-bottom:1px dotted #ccc;"><a href="?job=sell_list&id=$rs[id]"><img alt='' src='$webdb[www_url]/member/images/art_icon.gif' border=0></a></td>
+          <td width="7%"  align="center" style="border-bottom:1px dotted #ccc;"><a href="$rs[demourl]" title="點擊浏览" target="_blank"><img src="$webdb[www_url]/member/images/icon_view.gif" border="0"></a></td>
+          <td width="8%"  align="center" style="border-bottom:1px dotted #ccc;"><a href="?job=buy&id=$rs[id]" style="color:red;">購買</a></td>
+        </tr>
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </table>
+	  
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">相关信息</td>
+        </tr>
+        <tr> 
+          <td class="middle">
+            <table width="100%" border="0" cellspacing="5" cellpadding="0" style="margin:10px 0 20px 5px;">
+              <tr> 
+                <td style="line-height:25px;">1.購買以上竞价广告,需要{$webdb[MoneyName]}購買,妳當前拥有的{$webdb[MoneyName]}数是 <b><font color="#FF0000">{$lfjdb[money]}</font></b> 個 <br>
+                  2.如果妳的{$webdb[MoneyName]}不足,妳可以在線充值.<a href="$webdb[www_url]/member/money.php?job=list"><b><font color="#FF0000">我要充值</font></b></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr><tr><td class="foot"></td></tr>
+      </table>
+
+
+      <!--
+EOT;
+}elseif($job=='mylist'){
+print <<<EOT
+-->
+      <table width="99%" border="0" cellspacing="1" cellpadding="3" class="dragTable">
+        <tr align="center" height="18" class='head' style="line-height:200%;"> 
+          <td width="30%">广告位名称</td>
+          <td width="21%" >广告内容</td>
+          <td width="27%" >投放日期</td>
+          <td width="8%" >出价</td>
+          <td width="14%" >操作</td>
+        </tr>
+        <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+        <tr class="trA" > 
+          <td  width="30%" style="border-bottom:1px dotted #ccc;padding-left:5px;"> {$rs[name]}</td>
+          <td width="21%"  align="center" style="border-bottom:1px dotted #ccc;"><a href="{$rs[adlink]}" target="_blank">{$rs[adword]}</a></td>
+          <td width="27%"  align="center" style="border-bottom:1px dotted #ccc;">开始:$rs[begintime]<br>
+            结束:$rs[endtime] </td>
+          <td width="8%"  align="center" style="border-bottom:1px dotted #ccc;">$rs[money]</td>
+          <td width="14%"  align="center" style="border-bottom:1px dotted #ccc;"><a href="?job=edit&ad_id=$rs[ad_id]"><img alt='點擊修改' src='$webdb[www_url]/member/images/button_edit.png' border=0></a> 
+             &nbsp;  &nbsp; <a href="?action=del&ad_id=$rs[ad_id]"  onclick="return confirm('妳确认要删除吗?不可恢复')"><img alt='點擊删除' src='$webdb[www_url]/member/images/del_icon2.gif' border=0></a></td>
+        </tr>
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </table>
+      
+      <!--
+EOT;
+}elseif($job=='sell_list'){
+print <<<EOT
+-->
+      <table width="99%" border="0" cellspacing="1" cellpadding="3" class="dragTable">
+        <tr align="center" height="18" class='head' style="line-height:200%;"> 
+          <td width="29%">广告内容</td>
+          <td width="17%" >用户名</td>
+          <td width="26%" >投放日期</td>
+          <td width="14%" >出价</td>
+          <td width="14%" >狀态</td>
+        </tr>
+        <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+        <tr class="trA" onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> 
+          <td  width="29%" style="border-bottom:1px dotted #ccc;"> <a href="{$rs[adlink]}" target="_blank">{$rs[adword]}</a></td>
+          <td width="17%"  align="center" style="border-bottom:1px dotted #ccc;">{$rs[username]}</td>
+          <td width="26%"  align="center" style="border-bottom:1px dotted #ccc;">开始:$rs[begintime]<br>
+            结束:$rs[endtime] </td>
+          <td width="14%"  align="center" style="border-bottom:1px dotted #ccc;">$rs[money]</td>
+          <td width="14%"  align="center" style="border-bottom:1px dotted #ccc;">$rs[state]</td>
+        </tr>
+        <!--
+EOT;
+}print <<<EOT
+-->
+        <tr  style="line-height:150%;" align="center"   > 
+          <td colspan="5" style="border-bottom:1px dotted #ccc;"> $showpage</td>
+        </tr>
+      </table>
+      <!--
+EOT;
+}elseif($job=='edit'){
+print <<<EOT
+-->
+      <table width="99%" border="0" cellspacing="1" cellpadding="3" class="dragTable">
+        <form name="form1" method="post" action="?">
+          <tr align="center" height="18" class='head' style="line-height:200%;"> 
+            <td colspan="2">購買广告</td>
+          </tr>
+          <tr  class="trA"  onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;"> 广告位名称:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;">{$rsdb[name]}</td>
+          </tr>
+          <tr class="trA"  onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">投放日期:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;">开始:$rsdb[begintime]<br>
+              结束:$rsdb[endtime] </td>
+          </tr>
+          <tr class="trA"  onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">出价:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;"> 
+              $rsdb[money] </td>
+          </tr>
+          <tr class="trA"  onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">广告文字内容:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;"> 
+              <input type="text" name="postdb[adword]" value="$rsdb[adword]">
+            </td>
+          </tr>
+          <tr class="trA"  onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> 
+            <td  width="29%" style="border-bottom:1px dotted #ccc;">广告链接地阯:</td>
+            <td width="71%"  align="left" style="border-bottom:1px dotted #ccc;"> 
+              <input type="text" name="postdb[adlink]" size="50" value="$rsdb[adlink]">
+            </td>
+          </tr>
+          <tr> 
+            <td  width="29%" >&nbsp;</td>
+            <td width="71%"  align="left" > 
+              <input type="submit" name="Submit2" value=" 修 改  ">
+              <input type="hidden" name="step" value="2">
+              <input type="hidden" name="ad_id" value="$ad_id">
+              <input type="hidden" name="job" value="$job">
+            </td>
+          </tr>
+        </form>
+      </table>
+      <!--
+EOT;
+}print <<<EOT
+-->
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

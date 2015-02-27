@@ -1,0 +1,35 @@
+<!--
+<?php
+if($lfjid){print <<<EOT
+-->
+                <li style="padding-left:40px"><a href="$webdb[www_url]/contact.htm">Â“‚SÎÒ‚ƒ</a> | <a href="$webdb[www_url]/do/login.php?action=quit">µÇ³ö</a><br />
+<!--
+EOT;
+if($lfjdb[groupid]=='12'){print <<<EOT
+-->
+         <a href="$webdb[www_url]/th.php?job=edit"><img src="$webdb[www_url]/images/img/btn_mypage.gif" style="margin:7px 0 0 0;"></a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+         <a href="$webdb[www_url]/member/"><img src="$webdb[www_url]/images/img/btn_mypage.gif" style="margin:7px 0 0 0;"></a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+                                    </li>
+
+<!--
+EOT;
+}else{print <<<EOT
+-->
+
+                <li><a href="$webdb[www_url]/contact.htm">Â“‚SÎÒ‚ƒ</a><br />
+                                            <a href="$webdb[www_url]/do/reg.php"><img src="$webdb[www_url]/images/img/header_btn_regist.jpg" /></a>
+                                    </li>
+
+<!--
+EOT;
+}?>
+-->

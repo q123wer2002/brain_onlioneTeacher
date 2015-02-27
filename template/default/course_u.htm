@@ -1,0 +1,152 @@
+<!--
+<?php
+print <<<EOT
+--><meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<div id="main">
+
+
+<div id="sidemenu">
+<SCRIPT src="$webdb[www_url]/do/hack.php?hack=login&job=js&styletype=3"></SCRIPT>   
+</div>
+
+
+<div class="mainarea">
+      <div id="reg">
+  <h2 class="bgorange">教學記錄</h2>
+  <ul class="pnkz">
+      <li><a href="$webdb[www_url]/">HOME</a> ></li>
+      <li>教學記錄</li>
+  </ul>
+<div style="width:710px">
+<div style="width:150px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">課程時間</div>
+<div style="width:60px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">要求</div>
+<div style="width:50px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">評價</div>
+<div style="width:120px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">評價留言</div>
+<div style="width:90px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">通話質量</div>
+<div style="width:60px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">缺席</div>
+<div style="width:80px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">上課記錄</div>
+<div style="width:80px; float:left; font-weight:bold; text-align:center; background:#F8F8F8; height:30px; line-height:30px; border:#CCCCCC 1px solid">學員程度</div>
+</div>
+<script type="text/javascript">
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+<div style="width:710px">
+<div style="width:150px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden" title="$rs[ktime]">$rs[ktime]</div>
+<div style="width:60px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden" title="$rs[request]">$rs[request]</div>
+<div style="width:50px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden" title="$rs[eva]">$rs[eva]</div>
+<div style="width:120px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden" title="$rs[evas]">$rs[evas]</div>
+<div style="width:90px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden"><img border="0" style="padding:7px 0px" src="$webdb[www_url]/member/images/star$rs[quality].gif" width="84" height="16"></div>
+<div style="width:60px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden">$rs[yz]</div>
+<div style="width:80px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden">$rs[records_a]</div>
+<div style="width:80px; float:left; text-align:center; height:30px; line-height:30px; border:#CCCCCC 1px solid; overflow:hidden">$rs[students_a]  <a href="###" onclick="openShutManager(this,'boxa$rs[id]',false,'聯繫','聯繫')">聯繫</a></div>
+</div>
+
+	<div id="box$rs[id]" style="display:none; background:#F8F8F6; padding:3px 10px; clear:both; border:#C9C9C9 1px solid; border-top:none; width:684px">
+	<form action="?" method="POST">
+<a href="###" onclick="openShutManager(this,'box$rs[id]',false,'關閉','關閉')" style="float:right">關閉</a>
+上課記錄： <br />
+<textarea name="records" style="height:50px; width:680px">$rs[records]</textarea>
+    <p style="color:#FF0000">※此填寫上課記錄。</p>		
+<center>
+<input type="submit" value=" 提 交 ">
+</center>
+<div style="height:10px; width:100%"></div>
+		<input type="hidden" name="job" value="records">
+		<input type="hidden" name="id" value="$rs[id]">
+		</form>
+		</div>
+		
+	<div id="boxs$rs[id]" style="display:none; background:#D4E0E6; padding:3px 10px; clear:both; border:#C9C9C9 1px solid; border-top:none; width:684px">
+	<form action="?" method="POST">
+<a href="###" onclick="openShutManager(this,'boxs$rs[id]',false,'關閉','關閉')" style="float:right">關閉</a>
+上課記錄： <br />
+<textarea name="students" style="height:50px; width:680px">$rs[students]</textarea>
+    <p style="color:#FF0000">※此填寫上學員程度。</p>		
+<center>
+<input type="submit" value=" 提 交 ">
+</center>
+<div style="height:10px; width:100%"></div>
+		<input type="hidden" name="job" value="students">
+		<input type="hidden" name="id" value="$rs[id]">
+		</form>
+		</div>
+		
+	<div id="boxa$rs[id]" style="display:none; background:#D4E0E6; padding:3px 10px; clear:both; border:#C9C9C9 1px solid; border-top:none; width:684px">
+<a href="###" onclick="openShutManager(this,'boxa$rs[id]',false,'關閉','關閉')" style="float:right">關閉</a>
+<span style="line-height:30px; height:30px"><strong>聯繫學員：</strong></span><br />
+<div style="width:100%; line-height:25px; padding-top:5px">
+<!--
+EOT;
+$query = $db->query("SELECT * FROM js_memberdata WHERE uid='$rs[u_id]'");
+while($rsdb = $db->fetch_array($query)){
+print <<<EOT
+-->
+<div style="width:50%; float:left">真實姓名: <span style="color:#666666">$rsdb[truename]</span></div>
+<div style="width:50%; float:left">Skype: <span style="color:#666666">$rsdb[msn]</span></div>
+<div style="width:50%; float:left">聯係電話: <span style="color:#666666">$rsdb[telephone]</span></div>
+<div style="width:50%; float:left">聯係手機: <span style="color:#666666">$rsdb[mobphone]</span></div>
+<div style="width:50%; float:left">QQ: <span style="color:#666666">$rsdb[oicq]</span></div>
+<div style="width:100%; float:left">自我介紹: <span style="color:#666666">$rsdb[introduce]</span></div>
+
+<br /><br />
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</div>
+		</div>
+		
+		
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<!--
+EOT;
+?>
+-->
