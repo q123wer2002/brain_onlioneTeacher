@@ -1,4 +1,5 @@
 <?php
+header("Content-Type:text/html; charset=utf-8");
 if(is_file('install.php')){
 	header("location:install.php");exit;
 }

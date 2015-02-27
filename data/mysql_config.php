@@ -4,8 +4,8 @@
 * 以下变量需根据您的服务器说明档修改
 */
 $dbhost = 'localhost';		// 数据库服务器(一般不必改)
-$dbuser = 'vhost19681';			// 数据库用户名
-$dbpw = '5564906';					// 数据库密碼
+$dbuser = 'root';			// 数据库用户名
+$dbpw = '135792468xcudy';					// 数据库密碼
 $dbname = 'vhost19681';				// 数据库名
 $pre='js_';				// 網站表区分符 
 

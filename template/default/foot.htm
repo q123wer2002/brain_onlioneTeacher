@@ -4,43 +4,8 @@ $www_url=str_replace("http://","",$webdb[www_url]);
 print <<<EOT
 -->
 <div class="pagetop"><a href="#header"><img src="$webdb[www_url]/images/img/common_top.jpg" alt="PAGETOP" width="77" height="27" /></a></div>
-<div id="footer">
-<ul id="footer_inner" class="clearfix">
-<li class="logo">
-<p><img src="$webdb[www_url]/images/img/footer_logo.jpg" alt="" width="224" height="54" /></p>
-<p><img src="$webdb[www_url]/images/img/footer_contact.jpg" width="308" height="74" /></p>
-</li>
-<li class="footnavi">
-<dl>
-<dt>Œ¦ì¶Ñ¸ËÙÓ¢ÎÄ</dt>
-<dd><a href="$webdb[www_url]/about.htm">Ó¢‡øºÍ·€¶¨ÄØ£¿</a></dd>
-<dd><a href="$webdb[www_url]/list.php?fid=1">Ó¢»áÔ’ÖvŸÒ»ÓE</a></dd>
-<dd><a href="$webdb[www_url]/fee.htm">ÙMÓÃ</a></dd>
-<dd><a href="$webdb[www_url]/faq.htm">³£ÒŠ†–î}</a></dd>
-<dd><a href="$webdb[www_url]/contact.htm">Â“ÀMÎÒ‚ƒ</a></dd>
-</dl>
-</li>
-<li class="footnavi">
-<dl>
-<dt>ŒWÙM</dt>
-<dd><a href="$webdb[www_url]/do/reg.php">ÎÒÔ]ƒÔÁËÒ»‚€ÃâÙMÔ‡ÓÃ</a></dd>
-<dd><a href="$webdb[www_url]/flow.htm">Á÷Á¿î</a></dd>
-<dd><a href="$webdb[www_url]/skype.htm">êPì¶Skype</a></dd>
-</dl>
-</li>
-<li class="footnavi">
-<dl>
-<dt>Õ¾ücÕªÒª</dt>
-<dd><a href="$webdb[www_url]/corporate.htm">Õ¾üc¸ÅÒª</a></dd>
-<dd><a href="$webdb[www_url]/privacy.htm">ë[Ë½Õş²ß</a></dd>
-<dd><a href="$webdb[www_url]/terms.htm">—l¿îºÍ—l¼ş</a></dd>
-<dd><a href="$webdb[www_url]/asct.htm">ï@Ê¾»ùì¶ÌØ¶¨ÙQÒ×·¨</a></dd>
-<dd><a href="$webdb[www_url]/links.htm">LINKS</a></dd>
-<dd><a href="$webdb[www_url]/recruit.htm">ÕĞÆ¸</a></dd>
-</dl>
-</li>
-</ul>
-<p class="algnC">$webdb[copyright]</p>
+<div class="bottom" style="background:#003356;color:white;">
+  <div class="foot">é›»å­ä¿¡ç®±ï¼šapple657799@gmail.com&nbsp;&nbsp;æœå‹™é›»è©±ï¼š0936-543-997&nbsp;&nbsp;Copyright Â© 2011 Happy English. All rights reserved.</div>
 </div>
 
 
@@ -50,7 +15,7 @@ print <<<EOT
 </div>
 
 <SCRIPT LANGUAGE="JavaScript">
-<!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã
+<!--//Ã„Â¿ÂµÃ„ÃŠÃ‡ÃÂªÃÃ‹Ã—Ã¶Â·Ã§Â¸Ã±Â·Â½Â±Ã£
 document.write('</div>');
 //-->
 </SCRIPT>
@@ -60,12 +25,12 @@ clickEdit.init();
 //-->
 </SCRIPT><SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/hack/count.php?fid=1"></SCRIPT>
 
-<!--CNZZÕ¾ücÍ³¼Æ
+<!--CNZZÃ•Â¾Ã¼cÃÂ³Â¼Ã†
 EOT;
 if($webdb[cnzz_open]&&$webdb[cnzz_id]){print <<<EOT
 -->
 <div style="display:none"><script src='http://pw.cnzz.com/c.php?id=$webdb[cnzz_id]' language='JavaScript' charset='gb2312'></script></div>
-<!--CNZZÕ¾ücÍ³¼Æ
+<!--CNZZÃ•Â¾Ã¼cÃÂ³Â¼Ã†
 EOT;
 }print <<<EOT
 -->
